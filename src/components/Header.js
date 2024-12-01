@@ -14,8 +14,8 @@ export default function Header() {
                 <NavLink to="/experience">Experience</NavLink>
             </div>
             <div className="end">
-                <a className="tiny-link" href="linkedin.com">L</a>
-                <a className="tiny-link" href="github.com">G</a>
+                <a className="tiny-link" href="https://linkedin.com/in/mikaisomerville">L</a>
+                <a className="tiny-link" href="https://github.com/mikais13">G</a>
                 <a className="tiny-link" href="">R</a>
             </div>
         </header>
