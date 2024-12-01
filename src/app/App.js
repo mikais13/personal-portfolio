@@ -1,9 +1,9 @@
 import React from 'react';
-import Root from './components/Root';
-import About from './components/About';
-import Contact from './components/Contact';
-import Home from './components/Home';
-import Experience from './components/Experience';
+import Root from '../components/Root';
+import About from '../components/About';
+import Contact from '../components/Contact';
+import Home from '../components/Home';
+import Experience from '../components/Experience';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './App.css';
 
