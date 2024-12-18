@@ -5,7 +5,7 @@ import Contact from '../components/Contact';
 import Home from '../components/Home';
 import Experience from '../components/Experience';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 const router = createBrowserRouter( createRoutesFromElements(
   <Route path="/" element={ <Root /> }>
