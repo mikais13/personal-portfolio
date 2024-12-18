@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Root from '../components/Root';
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -17,6 +17,10 @@ const router = createBrowserRouter( createRoutesFromElements(
 ));
 
 function App() {
+  useEffect(() => {
+    document.title = `Mikai's Portfolio`;
+  }, []);
+
   return (
     <>
       <RouterProvider router={router} />

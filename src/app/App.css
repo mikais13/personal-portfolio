@@ -3,9 +3,9 @@
   background-color: var(--black);
   --black: #282c2f;
   --white: #ffffff;
-  --grey: #878787;
+  --grey: #484c4f;
   --shadow: #000000;
-  --default-transition: all 0.4s ease-in-out;
+  --default-transition: all 0.35s ease-in-out;
   --default-font: 1em, 'Arial', sans-serif;
 }
 
@@ -61,7 +61,8 @@ header a{
   padding: 8px 12px 8px 12px;
   margin-left: 16px;
   margin-right: 16px; 
-  background-color: var(--white);
+  background-color: var(--black);
+  color: var(--white);
   border-radius: 6px;
   box-shadow: var(--shadow) 1px 2px 3px;
   transform: scale(1);
@@ -70,9 +71,8 @@ header a{
 
 header a:hover{
   background-color: var(--grey);
-  color: var(--white);
   box-shadow: var(--shadow) 1px 2px 6px;
-  transform: scale(1.05);
+  transform: scale(1.025);
   transition: var(--default-transition);
 }
 
