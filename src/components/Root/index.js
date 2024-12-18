@@ -1,11 +1,11 @@
 import React  from "react";
-import Header from "../components/Header";
+import Navigation from "../Navigation";
 import { Outlet } from "react-router-dom";
 
 export default function Root() {
     return (
         <div className="root">
-            <Header />
+            <Navigation />
             <div className="main">
                 <Outlet />
             </div>
