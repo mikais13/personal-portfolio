@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Home() {
     return (
-        <section>
+        <div className="page-container">
             <h1>Home</h1>
             <p>This is the home page.</p>
-        </section>
+        </div>
     );
 }
