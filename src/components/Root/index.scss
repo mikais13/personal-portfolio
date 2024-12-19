@@ -1,23 +1,33 @@
 @use '../../utils/variables' as *;
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .root {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: center;
+    width: 100vw;
+    max-width: 1280px;
     min-height: 100vh;
-    max-width: 100vw;
     background-color: $black;
     color: $white;
     font: $default-font;
 }
 
+@media screen and (max-width: 800px){
+    .root{
+        flex-direction: column;
+    }
+}
+
 .main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-    min-height: 90vh;
+    width: 50vw;
+    max-width: 640px;
+    min-height: 100vh;
 }
