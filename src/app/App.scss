@@ -1,10 +1,6 @@
+@use '../utils/variables' as *;
+
 :root{
     font-size: 16px;
-    background-color: var(--black);
-    --black: #282c2f;
-    --white: #ffffff;
-    --grey: #484c4f;
-    --shadow: #000000;
-    --default-transition: all 0.35s ease-in-out;
-    --default-font: 1em, 'Arial', sans-serif;
+    background-color: $black;
 }
