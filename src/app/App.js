@@ -18,7 +18,7 @@ const router = createBrowserRouter( createRoutesFromElements(
 
 function App() {
   useEffect(() => {
-    document.title = `Mikai's Portfolio`;
+    document.title = `Mikai Somerville`;
   }, []);
 
   return (
