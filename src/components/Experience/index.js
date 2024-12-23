@@ -1,10 +1,9 @@
 import React from "react";
 import Loader from "react-loaders";
+import ExperienceList from "./ExperienceList";
 import "./index.scss";
 
-export default function Experience() {
-
-
+export default function ExperiencePage() {
     return (
         <>
             <div className="page-container">
@@ -12,10 +11,10 @@ export default function Experience() {
                     <h1>Experience</h1>
                 </div>
                 <div className="content-container">
-                    
+                    <ExperienceList/>
                 </div>
             </div>
-            <Loader type="ball-scale" active={true}/>
+            <Loader type="ball-scale" active={false}/>
         </>
     );
 }

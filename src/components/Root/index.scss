@@ -35,13 +35,14 @@ body{
     max-width: 640px;
     height: 100vh;
     min-height: 100vh;
+    margin-right: 160px;
 
     .title-container{
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        width: 50vw;
+        width: 100%;
         padding-top: 16px;
         color: $white;
         font: $default-font;
@@ -52,19 +53,19 @@ body{
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        width: 50vw;
+        width: 100%;
         margin-top: 16px;
         margin-bottom: 16px;
         color: $white;
         font: $default-font;
 
         p{
-            margin: 6px 16px 6px 16px;
+            margin: 6px 16px 6px 0px;
         }
     }
 
     h1{
-        margin: 6px 16px 6px 16px;
+        margin: 6px 16px 6px 0px;
         color: $white;
     }
 }
@@ -84,17 +85,35 @@ body{
     .page-container{
         width: 100vw;
         max-width: 100vw;
+        margin-right: 0px;
+        min-height: fit-content;
+        height: fit-content;
+        max-height: fit-content;
+
+        .title-container{
+            min-width: 90%;
+            width: 90%;
+            max-width: 90%;
+        }
+
+        .content-container{
+            min-width: 100vw;
+            width: 100vw;
+            max-width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                padding-left: 16px;
+            }
+        }
+
+        h1{
+            padding-left: 16px;
+        }
     }
 
-    .title-container{
-        min-width: 100vw;
-        width: 100vw;
-        max-width: 100vw;
-    }
-
-    .content-container{
-        min-width: 100vw;
-        width: 100vw;
-        max-width: 100vw;
-    }
+    
 }
