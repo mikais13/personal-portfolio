@@ -15,7 +15,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <Loader type="ball-scale" active={true}/>
+            <Loader type="ball-scale" active={false}/>
         </>
     );
 }

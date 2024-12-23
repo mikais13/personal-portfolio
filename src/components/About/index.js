@@ -12,7 +12,7 @@ export default function About() {
                     <p>This is the about page.</p>
                 </div>
             </div>
-            <Loader type="ball-scale" active={true}/>
+            <Loader type="ball-scale" active={false}/>
         </>
     );
 }

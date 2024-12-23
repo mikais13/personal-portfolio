@@ -12,7 +12,7 @@ export default function Contact() {
                     <p>This is the contact page.</p>
                 </div>
             </div>
-            <Loader type="ball-scale" active={true}/>
+            <Loader type="ball-scale" active={false}/>
         </>
     );
 }
