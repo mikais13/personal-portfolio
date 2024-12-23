@@ -88,7 +88,7 @@ header{
 
         @media (hover: hover){
             &:hover{
-                transform: scale(1.1) translateX(8px);
+                transform: scale(1.1) translateY(-8px);
                 transition: $default-transition;
             }
         }
