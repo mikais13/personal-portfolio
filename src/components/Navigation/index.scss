@@ -70,11 +70,13 @@ header{
         transform: scale(1) translateX(0px);
         transition: $default-transition;
 
-        &:hover{
-            background-color: $grey;
-            box-shadow: $shadow 1px 2px 6px;
-            transform: scale(1.025) translateX(16px);
-            transition: $default-transition;
+        @media (hover: hover){
+            &:hover{
+                background-color: $grey;
+                box-shadow: $shadow 1px 2px 6px;
+                transform: scale(1.025) translateX(16px);
+                transition: $default-transition;
+            }
         }
     }
 
@@ -84,9 +86,11 @@ header{
         transform: scale(1) translateX(0px);
         transition: $default-transition;
 
-        &:hover{
-            transform: scale(1.1) translateY(-8px);
-            transition: $default-transition;
+        @media (hover: hover){
+            &:hover{
+                transform: scale(1.1) translateX(8px);
+                transition: $default-transition;
+            }
         }
     }
 }
@@ -133,10 +137,6 @@ header{
         a{
             margin-left: 6px;
             margin-right: 6px;
-        }
-
-        a:hover, .logo-link:hover{
-            transform: translateX(0);
         }
     }
 
