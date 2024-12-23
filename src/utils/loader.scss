@@ -1,0 +1,11 @@
+@use "./variables" as *;
+$primary-color: $white;
+@import 'loaders.css/src/animations/ball-scale.scss';
+
+.loader-hidden{
+    display: none;
+}
+
+.loader-active{
+    display: block;
+}
