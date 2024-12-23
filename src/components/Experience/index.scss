@@ -1,6 +1,52 @@
 @use '../../utils/variables' as *;
 
-.experience-section{
+.filtering{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    button{
+        background-color: $hover-black;
+        color: $grey;
+        padding: 4px 8px;
+        margin-right: 8px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 16px;
+        text-decoration: line-through;
+        font-weight: bold;
+        transition: $default-transition;
+
+        @media (hover: hover){
+            &:hover{
+                background-color: $grey;
+                color: $white;
+                cursor: pointer;
+                transition: $default-transition;
+            }
+        }
+
+        &.selected{
+            background-color: $grey;
+            color: $white;
+            text-decoration: none;
+            transition: $default-transition;
+
+            @media (hover: hover){
+                &:hover{
+                    background-color: $hover-black;
+                    color: $grey;
+                    transition: $default-transition;
+                }
+            }
+        }
+    }
+}
+
+.experience-card{
     background-color: $black;
     display: flex;
     flex-direction: row;
@@ -41,8 +87,13 @@
 }
 
 @media screen and (max-width: 800px){
-    .experience-section{
-        width: 90%;
+    .filtering{
+        width: 100%;
+        margin-left: 24px;
+    }
+
+    .experience-card{
+        width: 100%;
         display: flex;
         flex-direction: column;
         transition: none;

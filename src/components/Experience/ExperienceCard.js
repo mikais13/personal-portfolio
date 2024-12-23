@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function ExperienceSection({ experience }) {
+export default function ExperienceCard({ experience }) {
     return (
-        <div className='experience-section'>
+        <div className='experience-card'>
             <div className='date'>
                 <p>{experience.startDate} - {experience.endDate}</p>
             </div>
