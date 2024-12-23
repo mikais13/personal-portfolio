@@ -1,5 +1,6 @@
 import React  from "react";
 import Loader from "react-loaders";
+import "./index.scss";
 
 export default function About() {
     return (

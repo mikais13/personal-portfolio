@@ -1,7 +1,10 @@
 import React from "react";
 import Loader from "react-loaders";
+import "./index.scss";
 
 export default function Experience() {
+
+
     return (
         <>
             <div className="page-container">
@@ -9,7 +12,7 @@ export default function Experience() {
                     <h1>Experience</h1>
                 </div>
                 <div className="content-container">
-                    <p>This is the experience page.</p>
+                    
                 </div>
             </div>
             <Loader type="ball-scale" active={true}/>
