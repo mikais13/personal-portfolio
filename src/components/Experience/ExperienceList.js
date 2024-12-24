@@ -5,7 +5,7 @@ export default function ExperienceList() {
     const experiences = [
         {
             title: "Research and Development Intern",
-            categories: ["Research", "Internship"],
+            categories: ["Research", "Internship", "Professional"],
             company: "PGG Wrightson",
             location: "Te Puke, New Zealand",
             startDate: "November 2024",

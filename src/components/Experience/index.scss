@@ -89,6 +89,26 @@
     }
 }
 
+a{
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+
+    svg{
+        transform: translate(0px, 1px) rotate(45deg);
+        transition: $default-transition;
+    }
+
+    @media (hover: hover){
+        &:hover{
+            svg{
+                transform: translate(2px, -1px) rotate(45deg);
+                transition: $default-transition;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 800px){
     .filtering{
         width: 100%;
@@ -110,5 +130,10 @@
             width: 100%;
             padding: 0px;
         }
+    }
+
+    .resume{
+        width: 100%;
+        margin-left: 24px;
     }
 }
