@@ -126,10 +126,8 @@
 @media screen and (max-width: 800px){
     .filtering{
         width: 100%;
-
-        & :first-child{
-            margin-left: 16px;
-        }
+        box-sizing: border-box;
+        padding-left: 16px;
     }
 
     .experience-card{
