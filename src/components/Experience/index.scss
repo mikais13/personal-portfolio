@@ -22,27 +22,22 @@
 
         @media (hover: hover){
             &:hover{
-                background-color: $grey;
-                color: $white;
                 cursor: pointer;
-                text-decoration: none;
-                transition: $default-transition;
             }
+            // &.hover{
+            //     background-color: $grey;
+            //     color: $white;
+            //     cursor: pointer;
+            //     text-decoration: none;
+            //     transition: $default-transition;
+            // }
         }
 
-        &.selected{
+        &.selected, &.hover{
             background-color: $grey;
             color: $white;
             text-decoration: none;
             transition: $default-transition;
-
-            @media (hover: hover){
-                &:hover{
-                    background-color: $hover-black;
-                    color: $grey;
-                    transition: $default-transition;
-                }
-            }
         }
     }
 }

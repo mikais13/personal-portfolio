@@ -35,22 +35,93 @@ export default function ExperienceList() {
     const handleCategoryToggle = (event) => {
         const selectedCategoryName = event.target.textContent;
         if (selectedCategoryName === "All") {
-            setCategories({
+            const newCategories = {
                 ...Object.fromEntries(
-                    Object.keys(categories).map(category => [category, !categories[selectedCategoryName]])
+                    Object.keys(categories).map(category => [category, !categories["All"]])
                 )
-            });
+            }
+            setCategories(newCategories);
+        } else if (categories[selectedCategoryName] === true && categories["All"] === false) {
+            const newCategories = {
+                ...Object.fromEntries(
+                    Object.keys(categories).map(category => [category, true])
+                )
+            }
+            setCategories(newCategories);
         } else {
             const newCategories = {
-                ...categories,
-                [selectedCategoryName]: !categories[selectedCategoryName],
-                "All": true
+                ...Object.fromEntries(
+                    Object.keys(categories).map(category => [category, false])
+                )
             }
-            const areAllSelected = Object.values(newCategories).every(category => category === true);
-            newCategories["All"] = areAllSelected;
+            newCategories[selectedCategoryName] = true;
             setCategories(newCategories);
         }
     };
+
+    const handleCategoryEnter = (event) => {
+        const selectedCategoryName = event.target.textContent;
+        if (selectedCategoryName === "All") {
+            if (categories["All"] === true) {
+                document.querySelectorAll("button").forEach(button => {
+                    button.classList.remove("selected");
+                });
+            } else {
+                document.querySelectorAll("button").forEach(button => {
+                        button.classList.add("selected");
+                });
+            }
+        } else {
+            if (categories["All"] === true) {
+                document.querySelectorAll("button").forEach(button => {
+                    if (button.textContent !== selectedCategoryName) {
+                        button.classList.remove("selected");
+                    }
+                });
+            } else {
+                if (categories[selectedCategoryName] === true) {
+                    document.querySelectorAll("button").forEach(button => {
+                        button.classList.add("selected");
+                    });
+                } else {
+                    document.querySelectorAll("button").forEach(button => {
+                        if (button.textContent === selectedCategoryName) {
+                            button.classList.add("selected");
+                        } else {
+                            button.classList.remove("selected");
+                        }
+                    });
+                }
+            }
+        }
+    };
+
+    const handleCategoryLeave = (event) => {
+        const selectedCategoryName = event.target.textContent;
+        if (selectedCategoryName === "All") {
+            if (categories["All"] === true) {
+                document.querySelectorAll("button").forEach(button => {
+                    button.classList.add("selected");
+                });
+            } else {
+                document.querySelectorAll("button").forEach(button => {
+                    if (categories[button.textContent] === true) {
+                        button.classList.add("selected");
+                    } else {
+                        button.classList.remove("selected");
+                    }
+                });
+            }
+        } else {
+            document.querySelectorAll("button").forEach(button => {
+                if (categories[button.textContent] === true) {
+                    button.classList.add("selected");
+                } else {
+                    button.classList.remove("selected");
+                }
+            });
+        }
+    }
 
     return (
         <>
@@ -58,7 +129,15 @@ export default function ExperienceList() {
                 {
                     ["All", ...experiences.flatMap(experience => experience.categories)].map((category) => {
                         return (
-                            <button key={category} onClick={handleCategoryToggle} className={ categories[category] === true ? 'selected' : '' }>{category}</button>
+                            <button 
+                                key={category} 
+                                onMouseEnter={handleCategoryEnter}
+                                onMouseLeave={handleCategoryLeave}
+                                onClick={handleCategoryToggle} 
+                                className={ categories[category] === true ? 'selected' : '' }
+                            >
+                                {category}
+                            </button>
                         );
                     })
                 }
