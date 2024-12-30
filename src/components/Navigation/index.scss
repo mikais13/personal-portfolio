@@ -117,26 +117,27 @@ header{
         }
 
         .middle{
+            box-sizing: border-box;
             flex-direction: row;
             justify-content: start;
             height: auto;
             width: 100%;
             margin-top: 0px;
+            padding-left: 8px;
         }
 
         .end{
+            box-sizing: border-box;
             flex-direction: row;
             justify-content: start;
             height: auto;
             width: 100%;
             margin-bottom: 4px;
+            padding-left: 8px;
         }
 
         a{
             margin-left: 6px;
-            &:first-of-type{
-                margin-left: 14px;
-            }
             margin-right: 6px;
 
             @media (hover: hover){
