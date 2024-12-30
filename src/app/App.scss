@@ -1,6 +1,6 @@
 @use '../utils/variables' as *;
 
 :root{
-    font-size: 16px;
+    font: $default-font;
     background-color: $black;
 }

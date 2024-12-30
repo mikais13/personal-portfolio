@@ -54,45 +54,59 @@
     justify-content: start;
     align-items: start;
     width: 95%;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    padding: 8px;
     border-radius: 4px;
-    box-shadow: 0px 0px 8px $black;
-    transform: scale(1);
     transition: $default-transition;
 
     @media (hover: hover){
         &:hover{
             background-color: $hover-black;
-            color: $white;
-            box-shadow: 0px 2px 4px $shadow;
-            transform: scale(1.025);
             transition: $default-transition;
         }
     }
 
     .date{
         width: 33%;
-        padding: 8px 4px;
+        padding: 8px 0px;
+        margin-left: 8px;
         font-weight: bold;
     }
 
     .info{
         padding: 8px 0px;
 
-        .title{
+        .title, .company{
             font-weight: bold;
         }
 
-        .company{
-            font-weight: bold;
+        .skills{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 14px;
+
+            .skill{
+                background-color: $grey;
+                color: $white;
+                padding: 4px 8px;
+                margin-right: 8px;
+                border: none;
+                border-radius: 14px;
+                text-decoration: none;
+                transition: $default-transition;
+            }
         }
     }
 }
 
-.resume{
+.resume-link{
     color: $white;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 12px;
 
     svg{
         transform: translate(0px, 1px) rotate(45deg);
@@ -112,28 +126,36 @@
 @media screen and (max-width: 800px){
     .filtering{
         width: 100%;
-        margin-left: 24px;
+
+        & :first-child{
+            margin-left: 16px;
+        }
     }
 
     .experience-card{
         width: 100%;
         display: flex;
         flex-direction: column;
-        transition: none;
 
         .date{
             width: 100%;
             padding: 0px;
+            margin: 0px;
         }
 
         .info{
             width: 100%;
             padding: 0px;
+            padding-bottom: 4px;
+
+            .skills{
+                padding-left: 16px;
+            }
         }
     }
 
-    .resume{
+    .resume-link{
         width: 100%;
-        margin-left: 24px;
+        margin-left: 32px;
     }
 }

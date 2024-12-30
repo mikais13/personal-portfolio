@@ -10,7 +10,7 @@ export default function ExperienceList() {
             location: "Te Puke, New Zealand",
             startDate: "November 2024",
             endDate: "Present",
-            skills: ["Research", "Development"],
+            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
             description: "Lots of Work"
         },
         {

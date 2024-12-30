@@ -14,7 +14,7 @@ export default function ExperiencePage() {
                 </div>
                 <div className="content-container">
                     <ExperienceList/>
-                    <a href="" className="resume">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
+                    <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
                 </div>
             </div>
             <Loader type="ball-scale" active={false}/>
