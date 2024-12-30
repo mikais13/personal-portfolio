@@ -17,7 +17,7 @@ header{
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        width: 50vw;
+        width: 100%;
         color: $white;
         font: $default-font;
     }
@@ -27,7 +27,7 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 50vw;
+        width: 100%;
         padding-top: 16px;
         color: $white;
         font: $default-font;
@@ -38,7 +38,7 @@ header{
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        width: 50vw;
+        width: 100%;
         margin-top: 16px;
         color: $white;
         font: $default-font;
@@ -49,7 +49,7 @@ header{
         flex-direction: row;
         justify-content: start;
         align-items: center;
-        width: 50vw;
+        width: 100%;
         margin-bottom: 12px;
         color: $white;
         font: $default-font;
@@ -73,7 +73,7 @@ header{
         @media (hover: hover){
             &:hover{
                 background-color: $grey;
-                box-shadow: $shadow 1px 2px 6px;
+                box-shadow: $shadow 1px 2px 8px;
                 transform: scale(1.025) translateX(16px);
                 transition: $default-transition;
             }
@@ -107,7 +107,7 @@ header{
             flex-direction: row;
             justify-content: start;
             height: auto;
-            width: 100vw;
+            width: 100%;
             padding-top: 8px;
 
             h1{
@@ -120,23 +120,48 @@ header{
             flex-direction: row;
             justify-content: start;
             height: auto;
-            width: 100vw;
+            width: 100%;
             margin-top: 0px;
-            margin-left: 8px;
+            // margin-left: 8px;
         }
 
         .end{
             flex-direction: row;
             justify-content: start;
             height: auto;
-            width: 100vw;
-            margin-left: 8px;
+            width: 100%;
+            // margin-left: 8px;
             margin-bottom: 4px;
         }
 
         a{
             margin-left: 6px;
+            &:first-of-type{
+                margin-left: 14px;
+            }
             margin-right: 6px;
+
+            @media (hover: hover){
+                &:hover{
+                    background-color: $grey;
+                    box-shadow: $shadow 1px 2px 8px;
+                    transform: none;
+                    transition: $default-transition;
+                }
+            }
+        }
+
+        .logo-link{
+            margin-right: 8px;
+
+            @media (hover: hover){
+                &:hover{
+                    background-color: $grey;
+                    box-shadow: $shadow 1px 2px 8px;
+                    transform: none;
+                    transition: $default-transition;
+                }
+            }
         }
     }
 
