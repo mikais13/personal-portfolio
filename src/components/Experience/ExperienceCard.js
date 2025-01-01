@@ -12,8 +12,8 @@ export default function ExperienceCard({ experience }) {
                 <p className='location'>{experience.location}</p>
                 <div className='skills'>
                     {
-                        experience.skills.map((skill, index) => {
-                            return <p key={index} className='skill'>{skill}</p>;
+                        experience.skills.map((skill) => {
+                            return <p id={skill} className='skill'>{skill}</p>;
                         })
                     }
                 </div>
