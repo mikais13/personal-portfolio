@@ -11,10 +11,10 @@ export default function ExperiencePage() {
             <div className="page-container">
                 <div className="title-container">
                     <h1>Experience</h1>
+                    <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
                 </div>
                 <div className="content-container">
                     <ExperienceList/>
-                    <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
                 </div>
             </div>
             <Loader type="ball-scale" active={false}/>
