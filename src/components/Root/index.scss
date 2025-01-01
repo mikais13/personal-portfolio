@@ -33,7 +33,7 @@ body{
     align-items: start;
     width: 50vw;
     max-width: 640px;
-    height: 100vh;
+    height: 100%;
     min-height: 100vh;
     margin-right: 160px;
 
@@ -43,9 +43,12 @@ body{
         justify-content: start;
         align-items: start;
         width: 100%;
-        padding-top: 16px;
+        padding: 16px 0px;
         color: $white;
+        background-color: $black;
         font: $default-font;
+        position: sticky;
+        top: 0;
     }
 
     .content-container{
@@ -91,9 +94,9 @@ body{
         max-height: fit-content;
 
         .title-container{
-            min-width: 90%;
-            width: 90%;
-            max-width: 90%;
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
         }
 
         .content-container{

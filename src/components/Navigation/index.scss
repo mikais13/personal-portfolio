@@ -9,8 +9,6 @@ header{
     max-width: 640px;
     height: 100vh;
     max-height: 100vh;
-    position: sticky;
-    top: 0;
 
     .top{
         display: flex;
@@ -20,6 +18,8 @@ header{
         width: 100%;
         color: $white;
         font: $default-font;
+        position: fixed;
+        top: 0px;
     }
 
     .start{
@@ -53,6 +53,8 @@ header{
         margin-bottom: 12px;
         color: $white;
         font: $default-font;
+        position: fixed;
+        bottom: 0px;
     }
 
     a, h1{
@@ -108,6 +110,7 @@ header{
             justify-content: start;
             height: auto;
             width: 100%;
+            background-color: $black;
             padding-top: 8px;
 
             h1{
