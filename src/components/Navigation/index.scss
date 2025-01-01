@@ -103,7 +103,10 @@ header{
         width: 100vw;
         height: auto;
         padding: 8px 0px 8px 0px;
-        position: static;
+
+        .top{
+            position: relative;
+        }
 
         .start{
             flex-direction: row;
@@ -137,6 +140,7 @@ header{
             width: 100%;
             margin-bottom: 4px;
             padding-left: 8px;
+            position: relative;
         }
 
         a{
