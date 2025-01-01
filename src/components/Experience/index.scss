@@ -64,12 +64,11 @@
     .date{
         min-width: 33%;
         padding: 8px 0px;
-        margin-left: 8px;
     }
 
     .info{
-        padding: 8px 0px;
-        margin-left: 8px;
+        box-sizing: border-box;
+        padding: 8px 8px 8px 0px;
         width: 100%;
 
         .title, .company{
