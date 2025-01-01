@@ -1,170 +1,7 @@
 import React, { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
 
-export default function ExperienceList() {
-    const experiences = [
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Full Stack Developer",
-            categories: ["Software Development"],
-            company: "WDCC",
-            location: "Auckland, New Zealand",
-            startDate: "March 2025",
-            endDate: "Present",
-            skills: ["React", "Node.js"],
-            description: "Lots of work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        },
-        {
-            title: "Research and Development Intern",
-            categories: ["Research", "Internship", "Professional"],
-            company: "PGG Wrightson",
-            location: "Te Puke, New Zealand",
-            startDate: "November 2024",
-            endDate: "Present",
-            skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-            description: "Lots of Work"
-        }
-    ];
-
+export default function ExperienceList({ id, experiences }) {
     const [categories, setCategories] = useState({
         "All": true,
         ...Object.fromEntries(
@@ -203,28 +40,28 @@ export default function ExperienceList() {
         const selectedCategoryName = event.target.id;
         if (selectedCategoryName === "All") {
             if (categories["All"] === true) {
-                document.querySelectorAll("button").forEach(button => {
+                document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                     button.classList.remove("selected");
                 });
             } else {
-                document.querySelectorAll("button").forEach(button => {
+                document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                         button.classList.add("selected");
                 });
             }
         } else {
             if (categories["All"] === true) {
-                document.querySelectorAll("button").forEach(button => {
+                document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                     if (button.id !== selectedCategoryName) {
                         button.classList.remove("selected");
                     }
                 });
             } else {
                 if (categories[selectedCategoryName] === true) {
-                    document.querySelectorAll("button").forEach(button => {
+                    document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                         button.classList.add("selected");
                     });
                 } else {
-                    document.querySelectorAll("button").forEach(button => {
+                    document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                         if (button.id === selectedCategoryName) {
                             button.classList.add("selected");
                         } else {
@@ -240,11 +77,11 @@ export default function ExperienceList() {
         const selectedCategoryName = event.target.id;
         if (selectedCategoryName === "All") {
             if (categories["All"] === true) {
-                document.querySelectorAll("button").forEach(button => {
+                document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                     button.classList.add("selected");
                 });
             } else {
-                document.querySelectorAll("button").forEach(button => {
+                document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                     if (categories[button.id] === true) {
                         button.classList.add("selected");
                     } else {
@@ -253,7 +90,7 @@ export default function ExperienceList() {
                 });
             }
         } else {
-            document.querySelectorAll("button").forEach(button => {
+            document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
                 if (categories[button.id] === true) {
                     button.classList.add("selected");
                 } else {
@@ -270,9 +107,10 @@ export default function ExperienceList() {
                     [...Object.keys(categories).map((category) => {
                         return (
                             <button 
-                                id={category} 
-                                onMouseEnter={handleCategoryEnter}
-                                onMouseLeave={handleCategoryLeave}
+                                id={category}
+                                data-name={id + "-" + category}
+                                onMouseEnter={(event) => handleCategoryEnter(event)}
+                                onMouseLeave={(event) => handleCategoryLeave(event)}
                                 onClick={handleCategoryToggle} 
                                 className={ categories[category] === true ? 'selected' : '' }
                             >
@@ -284,9 +122,9 @@ export default function ExperienceList() {
             </div>
             {
                 Object.keys(categories).filter(category => categories[category] === true).length === 0?
-                    <p>No experiences found</p> :
+                    <p>No {id} found</p> :
                     categories["All"] === true ?
-                        experiences.map((experience, index) => (
+                        experiences.map((experience) => (
                             <ExperienceCard experience={experience} />
                         ))
                         :
