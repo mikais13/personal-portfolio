@@ -11,7 +11,9 @@ export default function Navigation() {
         <header>
             <div className="top">
                 <div className={"start"}>
-                    <h1><code>Mikai Somerville</code></h1>
+                    <NavLink to="/">
+                        <h1><code>Mikai Somerville</code></h1>
+                    </NavLink>
                 </div>
                 <div className="middle">
                     <div className={`nav-link ${pathname === "/" ? "active" : ""}`}>

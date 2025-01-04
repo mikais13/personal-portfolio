@@ -31,6 +31,10 @@ header{
         padding-top: 16px;
         color: $white;
         font: $default-font;
+        a {
+            text-decoration: none;
+            color: $white;
+        }
     }
 
     .middle{
