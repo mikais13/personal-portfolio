@@ -9,6 +9,8 @@ header{
     max-width: 640px;
     height: 100vh;
     max-height: 100vh;
+    box-sizing: border-box;
+    padding-left: 32px;
 
     .top{
         display: flex;
@@ -28,7 +30,7 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding-top: 16px;
+        padding-top: 48px;
         color: $white;
         font: $default-font;
         a {
@@ -54,7 +56,7 @@ header{
         justify-content: start;
         align-items: center;
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 48px;
         color: $white;
         font: $default-font;
         position: fixed;

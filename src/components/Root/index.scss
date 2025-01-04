@@ -36,6 +36,9 @@ body{
     height: 100%;
     min-height: 100%;
     position: relative;
+    box-sizing: border-box;
+    padding-top: 32px;
+    padding-right: 16px;
 
     .title-container{
         display: flex;
@@ -43,7 +46,7 @@ body{
         justify-content: start;
         align-items: start;
         width: 100%;
-        padding: 16px 0px;
+        padding: 16px 0px 16px 0px;
         color: $white;
         background-color: $black;
         font: $default-font;
@@ -92,6 +95,7 @@ body{
         min-height: fit-content;
         height: fit-content;
         max-height: fit-content;
+        padding-top: 0px;
 
         .title-container{
             min-width: 100%;
