@@ -3,14 +3,16 @@ import React from 'react';
 export default function ExperienceCard({ experience }) {
     return (
         <div className='experience-card'>
-            {
-                experience.startDate != null || experience.endDate != null ?
-                <div className='date'>
-                    <p>{ `${experience.startDate} - ${experience.endDate}` }</p>
-                </div> : null
-            }
-            <div className='info'>
+            <div className="header">
                 <p className='title'>{experience.title}</p>
+                {
+                    experience.startDate != null || experience.endDate != null ?
+                    <div className='date'>
+                        <p>{ `${experience.startDate} - ${experience.endDate}`}</p>
+                    </div> : null
+                }
+            </div>
+            <div className='info'>
                 <p className='company'>{experience.company}</p>
                 <p className='location'>{experience.location}</p>
                 <div className='skills'>
