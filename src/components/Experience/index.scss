@@ -50,6 +50,7 @@
     align-items: start;
     width: 95%;
     margin-bottom: 8px;
+    margin-left: -16px;
     padding: 8px;
     border-radius: 8px;
     transition: $default-transition;
@@ -141,6 +142,7 @@
 
     .experience-card{
         width: 100%;
+        margin-left: 0px;
 
         .header{
             padding: 0px;
