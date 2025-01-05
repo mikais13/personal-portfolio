@@ -8,38 +8,33 @@ import "./index.scss";
 const roles = [
     {
         title: "Research and Development Intern",
-        categories: ["Research", "Internship", "Professional"],
+        categories: ["Internship", "Professional", "Research"],
         company: "PGG Wrightson",
         location: "Te Puke, New Zealand",
         startDate: "Nov 2024",
         endDate: "Feb 2025",
-        skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-        description: "Lots of Work"
-    },
-    {
-        title: "Full Stack Developer",
-        categories: ["Software Development"],
-        company: "WDCC",
-        location: "Auckland, New Zealand",
-        startDate: "Mar 2025",
-        endDate: "Present",
-        skills: ["React", "Node.js"],
-        description: "Lots of work"
+        skills: [ "Python", "OpenCV", "Research and Development", "Data Analysis", "Excel"],
+        description: "Developed industry-first computer vision scripts in Python using OpenCV to find the size of kiwifruit with 100% accuracy using RGB-D imaging. Completed research project including literature review, report and presentation to business leaders. Assisted experiential trial of kiwifruit biostimulants, performing data analysis using Excel"
     }
 ];
 
 const projects = [
     {
-        title: "Project 1",
-        categories: ["Research", "Internship", "Professional"],
-        skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-        description: "Lots of Work"
+        title: "Portfolio Website",
+        link: "https://www.github.com/mikais13",
+        categories: ["Research", "Internship", "Professional", "Web Development"],
+        startDate: "Nov 2024",
+        endDate: "Present",
+        skills: ["React", "JavaScript", "HTML", "CSS", "SASS", "React-Router"],
+        description: "A simple portfolio website to showcase my experience and projects. "
     },
     {
-        title: "Project 2",
-        categories: ["Research", "Internship", "Professional", "Project 2"],
-        skills: ["Research", "Development", "Data Analysis", "OpenCV"],
-        description: "Lots of Work"
+        title: "Club Management System",
+        link: "https://php.kkc.school.nz/CHG/2023_Y13%20Exemplars/AS91902/",
+        categories: ["Academic", "Web Development"],
+        startDate: "2023",
+        skills: ["PHP", "SQL", "JavaScript", "HTML", "CSS", "Bootstrap"],
+        description: "A full-stack web application to manage school clubs, including a database, login system, and CRUD operations. My project for AS91902, the NCEA Level 3 standard 'Use complex techniques to develop a database'."
     }
 ];
 
