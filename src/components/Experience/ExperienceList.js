@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function ExperienceList({ id, experiences }) {
     experiences = experiences.sort((a, b) => {
@@ -138,18 +139,27 @@ export default function ExperienceList({ id, experiences }) {
                     })]
                 }
             </div>
-            {
-                Object.keys(categories).filter(category => categories[category] === true).length === 0?
-                    <p>No {id} found</p> :
-                    categories["All"] === true ?
-                        experiences.map((experience) => (
-                            <ExperienceCard experience={experience} />
-                        ))
-                        :
-                        experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
-                            <ExperienceCard experience={experience} />
-                        ))
-            }
+            <AnimatePresence>
+                {
+                    Object.keys(categories).filter(category => categories[category] === true).length === 0?
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            layoutId={id}
+                        >
+                            No {id} found
+                        </motion.p> :
+                        categories["All"] === true ?
+                            experiences.map((experience) => (
+                                <ExperienceCard experience={experience} />
+                            ))
+                            :
+                            experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
+                                <ExperienceCard experience={experience} />
+                            ))
+                }
+            </AnimatePresence>
         </>
     );
 }

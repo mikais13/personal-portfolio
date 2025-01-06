@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
 export default function ExperienceCard({ experience }) {
     var date = "";
@@ -10,7 +11,14 @@ export default function ExperienceCard({ experience }) {
     }
 
     return (
-        <div className='experience-card'>
+        <motion.div
+            className='experience-card'
+            key={experience.title}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            layoutId={experience.title}
+        >
             <div className="header">
                 <p className='title'>{experience.title}</p>
                 <div className='date'>
@@ -29,6 +37,6 @@ export default function ExperienceCard({ experience }) {
                 </div>
                 <p className='description'>{experience.description}</p>
             </div>
-        </div>
+        </motion.div>
     );
 }
