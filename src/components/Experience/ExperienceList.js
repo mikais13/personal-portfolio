@@ -2,10 +2,28 @@ import React, { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
 
 export default function ExperienceList({ id, experiences }) {
+    experiences = experiences.sort((a, b) => {
+        if (a.startDate < b.startDate) {
+            return 1;
+        } else if (a.startDate > b.startDate) {
+            return -1;
+        } else {
+            return 0;
+        }
+    });
+
     const [categories, setCategories] = useState({
         "All": true,
         ...Object.fromEntries(
-            [...new Set(experiences.flatMap(experience => experience.categories))].map(category => [category, true])
+            [...new Set(experiences.flatMap(experience => experience.categories))].sort((a, b) => {
+                if (a < b) {
+                    return -1;
+                } else if (a > b) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }).map(category => [category, true])
         )
     });
 
