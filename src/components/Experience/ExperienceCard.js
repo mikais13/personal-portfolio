@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, MotionConfig } from 'motion/react';
 
 export default function ExperienceCard({ experience }) {
     var date = "";
@@ -14,10 +14,9 @@ export default function ExperienceCard({ experience }) {
         <motion.div
             className='experience-card'
             key={experience.title}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            layoutId={experience.title}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ backgroundColor: 'var(--hover-black)' }}
         >
             <div className="header">
                 <p className='title'>{experience.title}</p>

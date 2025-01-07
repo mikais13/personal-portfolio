@@ -53,12 +53,12 @@
     margin-left: -16px;
     padding: 8px;
     border-radius: 8px;
-    transition: $default-transition;
+    // transition: $default-transition;
 
     @media (hover: hover){
         &:hover{
-            background-color: $hover-black;
-            transition: $default-transition;
+            // background-color: $hover-black;
+            // transition: $default-transition;
         }
     }
 
@@ -106,7 +106,7 @@
                 border: none;
                 border-radius: 14px;
                 text-decoration: none;
-                transition: $default-transition;
+                // transition: $default-transition;
             }
         }
     }

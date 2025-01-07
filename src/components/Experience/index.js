@@ -4,6 +4,7 @@ import ExperienceList from "./ExperienceList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
+import { motion } from "motion/react";
 
 const roles = [
     {
@@ -41,7 +42,13 @@ const projects = [
 export default function ExperiencePage() {
     return (
         <>
-            <div className="page-container">
+            <motion.div
+                className="page-container"
+                layoutId="experience-page"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                layoutScroll
+            >
                 <div className="title-container">
                     <h1>Experience</h1>
                     <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
@@ -55,7 +62,7 @@ export default function ExperiencePage() {
                 <div className="content-container">
                     <ExperienceList id="projects" experiences={projects}/>
                 </div>
-            </div>
+            </motion.div>
             <Loader type="ball-scale" active={false}/>
         </>
     );

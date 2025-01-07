@@ -1,17 +1,23 @@
 import React  from "react";
 import Loader from "react-loaders";
+import { motion } from "motion/react";
 
 export default function About() {
     return (
         <>
-            <div className="page-container">
+            <motion.div 
+                className="page-container"
+                layoutId="about-page"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+            >
                 <div className="title-container">
                     <h1>About Me</h1>
                 </div>
                 <div className="content-container">
                     <p>This is the about page.</p>
                 </div>
-            </div>
+            </motion.div>
             <Loader type="ball-scale" active={false}/>
         </>
     );

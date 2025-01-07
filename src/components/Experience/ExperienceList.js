@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, MotionConfig } from 'motion/react';
 
 export default function ExperienceList({ id, experiences }) {
     experiences = experiences.sort((a, b) => {
@@ -139,13 +139,16 @@ export default function ExperienceList({ id, experiences }) {
                     })]
                 }
             </div>
-            <AnimatePresence>
+            <MotionConfig
+                transition={{ 
+                    duration: 0.25,
+                }}
+            >
                 {
                     Object.keys(categories).filter(category => categories[category] === true).length === 0?
                         <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
                             layoutId={id}
                         >
                             No {id} found
@@ -159,7 +162,7 @@ export default function ExperienceList({ id, experiences }) {
                                 <ExperienceCard experience={experience} />
                             ))
                 }
-            </AnimatePresence>
+            </MotionConfig>
         </>
     );
 }
