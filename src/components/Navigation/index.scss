@@ -76,14 +76,14 @@ header{
         background-color: $black;
         text-decoration: none;
         font-weight: bold;
-        color: $grey;
+        color: $light-blue;
         transition: $default-transition;
 
         .line{
             width: 2em;
             height: 4px;
             border-radius: 2px;
-            background-color: $grey;
+            background-color: $light-blue;
             margin-right: 12px;
             transition: $default-transition;
         }
@@ -114,7 +114,7 @@ header{
     }
 
     .logo-link{
-        color: $grey;
+        color: $light-blue;
         font-size: 1.5em;
         margin-right: 16px;
         transition: $default-transition;
@@ -196,7 +196,7 @@ header{
         .logo-link{
             @media (hover: hover){
                 &:hover{
-                    background-color: $grey;
+                    background-color: $light-blue;
                     box-shadow: $shadow 1px 2px 8px;
                     transform: none;
                     transition: $default-transition;

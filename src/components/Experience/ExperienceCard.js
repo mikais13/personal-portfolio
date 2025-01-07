@@ -16,7 +16,7 @@ export default function ExperienceCard({ experience }) {
             key={experience.title}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ backgroundColor: 'var(--hover-black)' }}
+            whileHover={{ backgroundColor: 'var(--grey)' }}
         >
             <div className="header">
                 <p className='title'>{experience.title}</p>

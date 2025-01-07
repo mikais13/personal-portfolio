@@ -9,14 +9,13 @@
     width: 100%;
 
     button{
-        background-color: $hover-black;
-        color: $grey;
+        background-color: $grey;
+        color: $blue;
         padding: 4px 8px;
         margin-right: 8px;
         margin-bottom: 16px;
         border: none;
         border-radius: 16px;
-        text-decoration: line-through;
         font-weight: bold;
         transition: $default-transition;
 
@@ -25,7 +24,7 @@
                 cursor: pointer;
             }
             // &.hover{
-            //     background-color: $grey;
+            //     background-color: $blue;
             //     color: $white;
             //     cursor: pointer;
             //     text-decoration: none;
@@ -34,7 +33,7 @@
         }
 
         &.selected, &.hover{
-            background-color: $grey;
+            background-color: $blue;
             color: $white;
             text-decoration: none;
             transition: $default-transition;
@@ -53,14 +52,6 @@
     margin-left: -16px;
     padding: 8px;
     border-radius: 8px;
-    // transition: $default-transition;
-
-    @media (hover: hover){
-        &:hover{
-            // background-color: $hover-black;
-            // transition: $default-transition;
-        }
-    }
 
     .header{
         display: flex;
@@ -99,14 +90,13 @@
             font-size: 14px;
 
             .skill{
-                background-color: $grey;
+                background-color: $blue;
                 color: $white;
                 padding: 4px 8px;
                 margin-right: 8px;
                 border: none;
                 border-radius: 14px;
                 text-decoration: none;
-                // transition: $default-transition;
             }
         }
     }
