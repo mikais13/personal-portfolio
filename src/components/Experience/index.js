@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import { motion } from "motion/react";
+import { stagger } from "motion";
 
 const roles = [
     {
@@ -45,8 +46,8 @@ export default function ExperiencePage() {
             <motion.div
                 className="page-container"
                 layoutId="experience-page"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 16 }} 
+                animate={{ opacity: 1, y: 0 }}
                 layoutScroll
             >
                 <div className="title-container">

@@ -8,8 +8,8 @@ export default function Home() {
             <motion.div
                 className="page-container"
                 layoutId="home-page"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
             >
                 <div className="title-container">
                     <h1>Home</h1>

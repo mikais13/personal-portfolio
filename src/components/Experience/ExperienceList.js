@@ -139,30 +139,24 @@ export default function ExperienceList({ id, experiences }) {
                     })]
                 }
             </div>
-            <MotionConfig
-                transition={{ 
-                    duration: 0.25,
-                }}
-            >
-                {
-                    Object.keys(categories).filter(category => categories[category] === true).length === 0?
-                        <motion.p
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            layoutId={id}
-                        >
-                            No {id} found
-                        </motion.p> :
-                        categories["All"] === true ?
-                            experiences.map((experience) => (
-                                <ExperienceCard experience={experience} />
-                            ))
-                            :
-                            experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
-                                <ExperienceCard experience={experience} />
-                            ))
-                }
-            </MotionConfig>
+            {
+                Object.keys(categories).filter(category => categories[category] === true).length === 0?
+                    <motion.p
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        layoutId={id}
+                    >
+                        No {id} found
+                    </motion.p> :
+                    categories["All"] === true ?
+                        experiences.map((experience) => (
+                            <ExperienceCard experience={experience} />
+                        ))
+                        :
+                        experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
+                            <ExperienceCard experience={experience} />
+                        ))
+            }
         </>
     );
 }
