@@ -37,13 +37,13 @@ export default function Navigation() {
                 </div>
             </div>
             <div className="end">
-                <a className="nav-link logo-link" href="https://linkedin.com/in/mikaisomerville" alt="LinkedIn">
+                <a className="nav-link logo-link" href="https://linkedin.com/in/mikaisomerville" title="LinkedIn" alt="LinkedIn">
                     <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a className="nav-link logo-link" href="https://github.com/mikais13" alt="GitHub">
+                <a className="nav-link logo-link" href="https://github.com/mikais13" title="Github" alt="GitHub">
                     <FontAwesomeIcon icon={faSquareGithub} />
                 </a>
-                <a className="nav-link logo-link" href="" alt="Resume">
+                <a className="nav-link logo-link" href="" title="Resume" alt="Resume">
                     <FontAwesomeIcon icon={faFile} />
                 </a>
             </div>
