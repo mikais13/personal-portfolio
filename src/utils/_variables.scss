@@ -1,5 +1,6 @@
 $black: rgb(20,25,30);
-$grey: rgb(20, 31, 38);
+$light-grey: rgb(148, 163, 180);
+$grey: rgb(28, 33, 38);
 $white: rgb(235,235,235);
 $light-blue: rgb(60, 105, 160);
 $blue: rgb(50, 80, 135);
@@ -9,9 +10,10 @@ $default-font: 1em, 'Arial', sans-serif;
 
 :root{
     --black: rgb(20,25,30);
+    --light-grey: rgb(148,163,180);
     --grey: rgb(28, 33, 38);
     --white: rgb(235,235,235);
-    --light-blue: rgb(75, 115, 180);
+    --light-blue: rgb(60, 105, 160);
     --blue: rgb(50, 80, 135);
     --shadow: rgb(0,0,0);
     --default-transition: all 0.25s ease-in-out;
