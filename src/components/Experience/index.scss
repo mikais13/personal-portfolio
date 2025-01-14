@@ -61,6 +61,7 @@
         .date{
             padding: 0px;
             margin: 0px;
+            color: $light-grey;
             text-align: right;
         }
     }
@@ -72,6 +73,11 @@
 
         .company{
             font-weight: bold;
+            color: $light-grey;
+        }
+
+        .location{
+            color: $light-grey;
         }
 
         .skills{
@@ -92,7 +98,14 @@
                 text-decoration: none;
             }
         }
-    }
+    }    
+}
+
+.no-experience {
+    color: $light-grey;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 16px;
 }
 
 .resume-link{
@@ -103,10 +116,10 @@
 
     svg{
         transform: translate(0px, 1px) rotate(45deg);
-        transition: $default-transition;
     }
 
     @media (hover: hover){
+        transition: $default-transition;
         &:hover{
             svg{
                 transform: translate(2px, -1px) rotate(45deg);

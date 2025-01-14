@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
-import { motion, MotionConfig } from 'motion/react';
+import { motion } from 'motion/react';
 
 export default function ExperienceList({ id, experiences }) {
     experiences = experiences.sort((a, b) => {
@@ -142,6 +142,7 @@ export default function ExperienceList({ id, experiences }) {
             {
                 Object.keys(categories).filter(category => categories[category] === true).length === 0?
                     <motion.p
+                        className='no-experience'
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         layoutId={id}

@@ -24,7 +24,7 @@ const projects = [
     {
         title: "Portfolio Website",
         link: "https://www.github.com/mikais13",
-        categories: ["Research", "Internship", "Professional", "Web Development"],
+        categories: ["Web Development", "Personal"],
         startDate: "Nov 2024",
         endDate: "Present",
         skills: ["React", "JavaScript", "HTML", "CSS", "SASS", "React-Router"],
