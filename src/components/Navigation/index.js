@@ -12,7 +12,7 @@ export default function Navigation() {
             <div className="top">
                 <div className={"start"}>
                     <NavLink to="/">
-                        <h1><code>Mikai Somerville</code></h1>
+                        <h1><code><div>Mikai</div><div>Somerville</div></code></h1>
                     </NavLink>
                 </div>
                 <div className="middle">
