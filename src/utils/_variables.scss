@@ -1,20 +1,18 @@
-$black: rgb(20,25,30);
-$light-grey: rgb(155, 170, 195);
-$grey: rgb(28, 33, 38);
+$black: rgb(20,20,30);
+$light-grey: rgb(165, 175, 200);
+$grey: rgb(30, 30, 40);
 $white: rgb(235,235,235);
-$light-blue: rgb(60, 105, 160);
-$blue: rgb(50, 80, 135);
+$blue: rgb(50, 80, 150);
 $shadow: rgb(0,0,0);
 $default-transition: all 0.25s ease-in-out;
 $default-font: 'Inter', sans-serif, normal, 1em, 1.5em;
 
 :root{
-    --black: rgb(20,25,30);
-    --light-grey: rgb(155, 170, 195);
-    --grey: rgb(28, 33, 38);
+    --black: rgb(20,20,30);
+    --light-grey: rgb(165, 175, 195);
+    --grey: rgb(35, 35, 45);
     --white: rgb(235,235,235);
-    --light-blue: rgb(60, 105, 160);
-    --blue: rgb(50, 80, 135);
+    --blue: rgb(50, 80, 150);
     --shadow: rgb(0,0,0);
     --default-transition: all 0.25s ease-in-out;
     --default-font: 1em, 'Inter', sans-serif;

@@ -202,7 +202,7 @@ header{
         .logo-link{
             @media (hover: hover){
                 &:hover{
-                    background-color: $light-blue;
+                    color: $white;
                     box-shadow: $shadow 1px 2px 8px;
                     transform: none;
                     transition: $default-transition;
