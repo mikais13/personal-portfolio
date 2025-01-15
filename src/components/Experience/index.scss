@@ -109,19 +109,29 @@
 }
 
 .resume-link{
-    color: $white;
+    color: $light-grey;
     text-decoration: none;
     font-weight: bold;
     margin-top: 12px;
 
     svg{
+        color: $light-grey;
         transform: translate(0px, 1px) rotate(45deg);
     }
 
     @media (hover: hover){
         transition: $default-transition;
+
+        svg {
+            transition: $default-transition;
+        }
+        
         &:hover{
+            color: $white;
+            transition: $default-transition;
+
             svg{
+                color: $white;
                 transform: translate(2px, -1px) rotate(45deg);
                 transition: $default-transition;
             }
