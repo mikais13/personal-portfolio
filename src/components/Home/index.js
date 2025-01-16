@@ -12,12 +12,23 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 <div className="title-container">
-                    <h1>Home</h1>
+                    <h1>Hey, I'm Mikai</h1>
                 </div>
                 <div className="content-container">
                     <p>
-                        Welcome to my portfolio! I'm a passionate developer focused on creating innovative solutions.
-                        I specialize in full-stack development with expertise in React, Node.js, and modern web technologies. With a strong foundation in software engineering principles, I strive to build scalable and maintainable applications. Throughout my career, I've worked on diverse projects ranging from e-commerce platforms to real-time data visualization systems. I'm always eager to learn new technologies and tackle challenging problems.
+                        Welcome to my portfolio!
+                        <br />
+                        I'm a current penultimate year Computer Science student at The University of Auckland, with a passion for solving problems and creating things through code.
+                    </p>
+                </div>
+                <div className="title-container">
+                    <h2>At The Moment</h2>
+                </div>
+                <div className="content-container">
+                    <p>
+                        I'm currently looking for internships and graduate roles in software development and data science.
+                        <br />
+                        I'm also working on a few side projects, including a new version of this website!
                     </p>
                 </div>
             </motion.div>
