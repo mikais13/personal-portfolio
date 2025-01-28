@@ -1,214 +1,302 @@
-@use '../../utils/variables' as *;
+@use "../../utils/variables" as *;
 
-header{
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 50vw;
+  max-width: 640px;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding-left: 32px;
+
+  .top {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
-    width: 50vw;
-    max-width: 640px;
-    height: 100vh;
-    max-height: 100vh;
-    box-sizing: border-box;
-    padding-left: 32px;
+    width: 100%;
+    color: $white;
+    font: $default-font;
+    position: fixed;
+    top: 0px;
+  }
 
-    .top{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        width: 100%;
+  .start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    padding-top: 32px;
+    color: $white;
+    font-size: 1.25em;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    div {
+      padding-top: 16px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin-top: 16px;
+    color: $white;
+    font: $default-font;
+  }
+
+  .end {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 48px;
+    color: $white;
+    font: $default-font;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  .nav-link,
+  h1 {
+    margin: 6px 16px;
+  }
+
+  .nav-link a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: $black;
+    text-decoration: none;
+    font-weight: bold;
+    color: $light-grey;
+    transition: $default-transition;
+
+    .line {
+      width: 2em;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $light-grey;
+      margin-right: 12px;
+      transition: $default-transition;
+    }
+
+    &.active {
+      color: $white;
+      transition: $default-transition;
+
+      .line {
+        width: 4em;
+        background-color: $white;
+        transition: $default-transition;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
         color: $white;
-        font: $default-font;
-        position: fixed;
-        top: 0px;
-    }
-
-    .start{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 100%;
-        padding-top: 32px;
-        color: $white;
-        font-size: 1.25em;
-        a {
-            text-decoration: none;
-            color: $white;
-        }
-        div {
-            padding-top: 16px;
-        }
-    }
-
-    .middle{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 100%;
-        margin-top: 16px;
-        color: $white;
-        font: $default-font;
-    }
-
-    .end{
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 48px;
-        color: $white;
-        font: $default-font;
-        position: fixed;
-        bottom: 0px;
-    }
-
-    .nav-link, h1{
-        margin: 6px 16px;
-    }
-
-    .nav-link a{
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        padding: 0px 0px;
-        background-color: $black;
-        text-decoration: none;
-        font-weight: bold;
-        color: $light-grey;
         transition: $default-transition;
 
-        .line{
-            width: 2em;
-            height: 4px;
-            border-radius: 2px;
-            background-color: $light-grey;
-            margin-right: 12px;
-            transition: $default-transition;
+        .line {
+          width: 4em;
+          background-color: $white;
+          transition: $default-transition;
         }
-
-        &.active{
-            color: $white;
-            transition: $default-transition;
-
-            .line{
-                width: 4em;
-                background-color: $white;
-                transition: $default-transition;
-            }
-        }
-
-        @media (hover: hover){
-            &:hover{
-                color: $white;
-                transition: $default-transition;
-
-                .line{
-                    width: 4em;
-                    background-color: $white;
-                    transition: $default-transition;
-                }
-            }
-        }
+      }
     }
+  }
 
-    .logo-link{
-        color: $light-grey;
-        font-size: 1.5em;
-        margin-right: 16px;
+  .logo-link {
+    color: $light-grey;
+    font-size: 1.5em;
+    margin-right: 16px;
+    transition: $default-transition;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $white;
         transition: $default-transition;
-
-        @media (hover: hover){
-            &:hover{
-                color: $white;
-                transition: $default-transition;
-            }
-        }
+      }
     }
+  }
 }
 
-@media screen and (max-width: 800px){
-    header{
-        min-width: 100vw;
-        width: 100vw;
-        height: auto;
-        padding: 8px 0px 8px 0px;
+.page-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 4em;
 
-        .top{
-            position: relative;
-        }
+  .line {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 20px;
+  }
 
-        .start{
-            flex-direction: row;
-            justify-content: start;
-            height: auto;
-            width: 100%;
-            background-color: $black;
-            padding-top: 8px;
-            font-size: 1.15em;
+  a {
+    border-radius: 20px;
+    background-color: $grey;
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: bold;
 
-            h1{
-                margin-top: 0px;
-                margin-bottom: 8px;
-            }
-        }
+    p {
+      margin: 0px;
+      padding: 12px 16px;
+      border-radius: 20px;
+      transition: $default-transition;
+    }
+  }
 
-        .middle{
-            box-sizing: border-box;
-            flex-direction: row;
-            justify-content: start;
-            height: auto;
-            width: 100%;
-            margin-top: 0px;
-            padding-left: 8px;
-            position: sticky;
-            top: 0;
-        }
-
-        .end{
-            box-sizing: border-box;
-            flex-direction: row;
-            justify-content: start;
-            height: auto;
-            width: 100%;
-            margin-bottom: 4px;
-            padding-left: 8px;
-            position: relative;
-        }
-
-        .nav-link{
-            margin: 0px 12px;
-        }
-
-        .nav-link a{
-            flex-direction: column-reverse;
-            justify-content: center;
-
-            .line{
-                display: none;
-            }
-
-            @media (hover: hover){
-                &:hover{
-                    transition: $default-transition;
-                }
-            }
-        }
-
-        .logo-link{
-            @media (hover: hover){
-                &:hover{
-                    color: $white;
-                    box-shadow: $shadow 1px 2px 8px;
-                    transform: none;
-                    transition: $default-transition;
-                }
-            }
-        }
+  @media (hover: hover) {
+    a {
+      margin-left: 0px;
+      margin-right: 0px;
     }
 
+    p:hover {
+      background-color: $blue;
+      transition: $default-transition;
+    }
+
+    .middle {
+      z-index: 3;
+      transition: $default-transition;
+
+      &.active {
+        border-radius: 0px;
+        transition: $default-transition;
+      }
+    }
+
+    .left,
+    .right {
+      opacity: 1;
+      transition: $default-transition;
+
+      &.right {
+        z-index: 2;
+        transform: translateX(-100%);
+        &.active {
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+      }
+
+      &.left {
+        z-index: 1;
+        transform: translateX(100%);
+        &.active {
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        transform: none;
+        transition: $default-transition;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    min-width: 100vw;
+    width: 100vw;
+    height: auto;
+    padding: 8px 0px 8px 0px;
+
+    .top {
+      position: relative;
+    }
+
+    .start {
+      flex-direction: row;
+      justify-content: start;
+      height: auto;
+      width: 100%;
+      background-color: $black;
+      padding-top: 8px;
+      font-size: 1.15em;
+
+      h1 {
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .middle {
+      box-sizing: border-box;
+      flex-direction: row;
+      justify-content: start;
+      height: auto;
+      width: 100%;
+      margin-top: 0px;
+      padding-left: 8px;
+      position: sticky;
+      top: 0;
+    }
+
+    .end {
+      box-sizing: border-box;
+      flex-direction: row;
+      justify-content: start;
+      height: auto;
+      width: 100%;
+      margin-bottom: 4px;
+      padding-left: 8px;
+      position: relative;
+    }
+
+    .nav-link {
+      margin: 0px 12px;
+    }
+
+    .nav-link a {
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      .line {
+        display: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transition: $default-transition;
+        }
+      }
+    }
+
+    .logo-link {
+      @media (hover: hover) {
+        &:hover {
+          color: $white;
+          box-shadow: $shadow 1px 2px 8px;
+          transform: none;
+          transition: $default-transition;
+        }
+      }
+    }
+  }
 }

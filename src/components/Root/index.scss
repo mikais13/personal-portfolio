@@ -1,123 +1,123 @@
-@use '../../utils/variables' as *;
+@use "../../utils/variables" as *;
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .root {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: start;
-    width: 100vw;
-    max-width: 1280px;
-    min-height: 100vh;
-    background-color: $black;
-    color: $white;
-    font: $default-font;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: start;
+  width: 100vw;
+  max-width: 1280px;
+  min-height: 100vh;
+  background-color: $black;
+  color: $white;
+  font: $default-font;
 }
 
-.main{
-    width: 50%;
-    max-width: 640px;
-    min-height: 100%;
+.main {
+  width: 50%;
+  max-width: 640px;
+  min-height: 100%;
 }
 
-.page-container{
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-right: 16px;
+
+  .title-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     width: 100%;
-    max-width: 640px;
-    height: 100%;
-    min-height: 100%;
-    position: relative;
-    box-sizing: border-box;
-    padding-top: 32px;
-    padding-right: 16px;
+    padding: 16px 0px 16px 0px;
+    color: $white;
+    background-color: $black;
+    font: $default-font;
+  }
 
-    .title-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        width: 100%;
-        padding: 16px 0px 16px 0px;
-        color: $white;
-        background-color: $black;
-        font: $default-font;
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: $white;
+    font: $default-font;
+
+    p {
+      margin: 6px 16px 6px 0px;
     }
+  }
 
-    .content-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        width: 100%;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        color: $white;
-        font: $default-font;
-
-        p{
-            margin: 6px 16px 6px 0px;
-        }
-    }
-
-    h1{
-        margin: 6px 16px 6px 0px;
-        color: $white;
-    }
+  h1 {
+    margin: 6px 16px 6px 0px;
+    color: $white;
+  }
 }
 
-@media screen and (max-width: 800px){
-    .root{
-        flex-direction: column;
-        max-width: 100vw;
+@media screen and (max-width: 800px) {
+  .root {
+    flex-direction: column;
+    max-width: 100vw;
+  }
+
+  .main {
+    width: 100vw;
+    max-width: 100vw;
+    min-height: auto;
+  }
+
+  .page-container {
+    width: 100vw;
+    max-width: 100vw;
+    margin-right: 0px;
+    min-height: fit-content;
+    height: fit-content;
+    max-height: fit-content;
+    padding-top: 0px;
+
+    .title-container {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+      position: initial;
     }
 
-    .main{
-        width: 100vw;
-        max-width: 100vw;
-        min-height: auto;
+    .content-container {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        padding-left: 16px;
+      }
     }
-    
-    .page-container{
-        width: 100vw;
-        max-width: 100vw;
-        margin-right: 0px;
-        min-height: fit-content;
-        height: fit-content;
-        max-height: fit-content;
-        padding-top: 0px;
 
-        .title-container{
-            min-width: 100%;
-            width: 100%;
-            max-width: 100%;
-            position: initial;
-        }
-
-        .content-container{
-            min-width: 100%;
-            width: 100%;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            p{
-                padding-left: 16px;
-            }
-        }
-
-        h1{
-            padding-left: 16px;
-        }
+    h1 {
+      padding-left: 16px;
     }
+  }
 }

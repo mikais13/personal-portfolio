@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from 'react-loaders';
 import { motion } from 'motion/react';
+import PagePill from "../Navigation/PagePill";
 
 export default function Home() {
     return (
@@ -31,8 +32,9 @@ export default function Home() {
                         I'm also working on a few side projects, including a new version of this website!
                     </p>
                 </div>
+                <PagePill left="about" middle="about" right="experience" />
             </motion.div>
-            <Loader type="ball-scale" active={false}/>
+            <Loader type="ball-scale" active={false} />
         </>
     );
 }
