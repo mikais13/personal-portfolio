@@ -32,7 +32,7 @@ export default function Home() {
                         I'm also working on a few side projects, including a new version of this website!
                     </p>
                 </div>
-                <PagePill left="about" middle="about" right="experience" />
+                <PagePill left="experience" middle="about" right="about" />
             </motion.div>
             <Loader type="ball-scale" active={false} />
         </>

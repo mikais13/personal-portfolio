@@ -159,11 +159,28 @@ header {
     margin-right: 8px;
     font-weight: bold;
 
+    svg {
+      transition: $default-transition;
+    }
+
+    &.left svg {
+      margin-right: 8px;
+    }
+
+    &.right svg {
+      margin-left: 8px;
+    }
+
     p {
       margin: 0px;
       padding: 12px 16px;
       border-radius: 20px;
       transition: $default-transition;
+
+      & svg {
+        transform: translateX(0px);
+        transition: $default-transition;
+      }
     }
   }
 
@@ -196,9 +213,15 @@ header {
       &.right {
         z-index: 2;
         transform: translateX(-100%);
+
         &.active {
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
+
+          & p:hover svg {
+            transform: translate(25%);
+            transition: $default-transition;
+          }
         }
       }
 
@@ -208,6 +231,12 @@ header {
         &.active {
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
+
+          & p:hover svg {
+            transform: translate(-25%);
+            transition: $default-transition;
+            transition-duration: infinite;
+          }
         }
       }
 
