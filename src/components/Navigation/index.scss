@@ -328,4 +328,17 @@ header {
       }
     }
   }
+
+  .page-link {
+    width: 100%;
+
+    .line {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+
+      .middle {
+        display: none;
+      }
+    }
+  }
 }
