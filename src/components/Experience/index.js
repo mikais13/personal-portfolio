@@ -1,11 +1,9 @@
 import React from "react";
-import Loader from "react-loaders";
 import ExperienceList from "./ExperienceList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import { motion } from "motion/react";
-import { stagger } from "motion";
 import PagePill from "../Navigation/PagePill";
 
 const roles = [
@@ -43,30 +41,28 @@ const projects = [
 
 export default function ExperiencePage() {
     return (
-        <>
-            <motion.div
-                className="page-container"
-                layoutId="experience-page"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                layoutScroll
-            >
-                <div className="title-container">
-                    <h1>Experience</h1>
-                    <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
-                </div>
-                <div className="content-container">
-                    <ExperienceList id="roles" experiences={roles} />
-                </div>
-                <div className="title-container">
-                    <h1>Projects</h1>
-                </div>
-                <div className="content-container">
-                    <ExperienceList id="projects" experiences={projects} />
-                </div>
-                <PagePill left="about" middle="home" right="home" />
-            </motion.div>
-            <Loader type="ball-scale" active={false} />
-        </>
+        <motion.div
+            className="page-container"
+            layoutId="page"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            layoutScroll
+        >
+            <div className="title-container">
+                <h1>Experience</h1>
+                <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
+            </div>
+            <div className="content-container">
+                <ExperienceList id="roles" experiences={roles} />
+            </div>
+            <div className="title-container">
+                <h1>Projects</h1>
+            </div>
+            <div className="content-container">
+                <ExperienceList id="projects" experiences={projects} />
+            </div>
+            <PagePill left="about" middle="home" right="home" />
+        </motion.div>
     );
 }
