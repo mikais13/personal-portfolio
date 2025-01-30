@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import { motion } from "motion/react";
+
 import PagePill from "../Navigation/PagePill";
 
 const roles = [
@@ -46,8 +47,6 @@ export default function ExperiencePage() {
             layoutId="page"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            layoutScroll
         >
             <div className="title-container">
                 <h1>Experience</h1>
