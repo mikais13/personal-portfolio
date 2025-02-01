@@ -173,6 +173,11 @@ header {
     }
 
     p {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: none;
       margin: 0px;
       padding: 12px 16px;
       border-radius: 20px;
@@ -190,9 +195,31 @@ header {
       margin-left: 0px;
       margin-right: 0px;
 
+      &.left p,
+      &.right p {
+        background-color: $black;
+        transition: $default-transition;
+
+        &:hover {
+          background-color: $blue;
+          transition: $default-transition;
+        }
+      }
+
       &.active {
         margin-top: 0px;
         transition: $default-transition;
+
+        p {
+          background-color: $grey;
+          transition: $default-transition;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        .arrow {
+          display: none;
+        }
       }
     }
 
@@ -208,6 +235,11 @@ header {
       &.active {
         border-radius: 0px;
         padding: 8px 6px;
+        transition: $default-transition;
+      }
+
+      p:hover {
+        background-color: $blue;
         transition: $default-transition;
       }
     }
@@ -252,6 +284,25 @@ header {
         transform: none;
         padding: 8px 6px;
         transition: $default-transition;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .page-link {
+    width: 100%;
+
+    .line {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+
+      a {
+        padding: 0px;
+      }
+
+      .middle {
+        display: none;
       }
     }
   }
@@ -333,23 +384,6 @@ header {
           transform: none;
           transition: $default-transition;
         }
-      }
-    }
-  }
-
-  .page-link {
-    width: 100%;
-
-    .line {
-      width: 100%;
-      grid-template-columns: 1fr 1fr;
-
-      a {
-        padding: 0px;
-      }
-
-      .middle {
-        display: none;
       }
     }
   }

@@ -13,7 +13,7 @@ export default function PagePill({ left, middle, right }) {
                 <div className="line">
                     <NavLink to={`/${left === "home" ? "" : left}`} className={`left ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("left")} onMouseLeave={() => setActive("")}>
                         <p className="inner" layout>
-                            <FontAwesomeIcon icon={faArrowLeft} />
+                            <FontAwesomeIcon icon={faArrowLeft} className="arrow" />
                             {left[0].toUpperCase() + left.slice(1)}
                         </p>
                     </NavLink>
@@ -25,7 +25,7 @@ export default function PagePill({ left, middle, right }) {
                     <NavLink to={`/${right === "home" ? "" : middle}`} className={`right ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("right")} onMouseLeave={() => setActive("")}>
                         <p className="inner" layout>
                             {right[0].toUpperCase() + right.slice(1)}
-                            <FontAwesomeIcon icon={faArrowRight} />
+                            <FontAwesomeIcon icon={faArrowRight} className="arrow" />
                         </p>
                     </NavLink>
                 </div>
