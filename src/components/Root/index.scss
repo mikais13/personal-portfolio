@@ -18,6 +18,7 @@ body {
   background-color: $black;
   color: $white;
   font: $default-font;
+  font-size: 1.05em;
 }
 
 .main {
@@ -46,10 +47,14 @@ body {
     justify-content: start;
     align-items: start;
     width: 100%;
-    padding: 16px 0px 16px 0px;
+    padding: 8px 0px;
     color: $white;
     background-color: $black;
     font: $default-font;
+
+    h1 {
+      font-size: 2.2em;
+    }
   }
 
   .content-container {
@@ -58,13 +63,15 @@ body {
     justify-content: start;
     align-items: start;
     width: 100%;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 32px;
     color: $white;
     font: $default-font;
 
     p {
       margin: 6px 16px 6px 0px;
+      line-height: 1.25em;
+      font-size: 1.05em;
     }
   }
 

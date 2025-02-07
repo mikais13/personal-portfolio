@@ -13,7 +13,7 @@ const education = [
         endDate: "2026",
         skills: ["Computer Science", "Mathematics", "Statistics"],
         description: [
-            "Currently studying in my penultimate year of a Bachelor of Science majoring in computer science.",
+            "Currently studying my penultimate year of a Bachelor of Science majoring in Computer Science.",
             "9.0/9.0 GPA - A+ average."
         ]
     },
@@ -37,6 +37,7 @@ const education = [
         description: [
             "Achieved Outstanding Scholarship (Top 27 Students) in Biology, and Scholarship (Top 236 Students) in Physics).",
             "Awarded Dux in 2023 for Highest Academic Achievement.",
+            "First in Level 3 Calculus and Digital Technology (2022), and First in Level 3 Physics and Chemistry (2023).",
             "Gained NCEA Level 1 (2021), Level 2 and Level 3 (2022) endorsed with Excellence."
         ]
     }
@@ -54,7 +55,7 @@ export default function About() {
                 <h1>About Me</h1>
             </div>
             <div className="content-container">
-                <p>Kia Ora, I'm Mikai Somerville, a penultimate year CS student at the University of Auckland. I grew up in the small town of Katikati before coming to Auckland for university.</p>
+                <p>Kia Ora, I'm Mikai Somerville, a penultimate year Computer Science student at the University of Auckland. I grew up in the small town of Katikati before coming to Auckland to pursue my passion for Computer Science and Software Development.</p>
             </div>
             <div className="title-container">
                 <h1>Education</h1>

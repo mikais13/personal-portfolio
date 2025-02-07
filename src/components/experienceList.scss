@@ -13,10 +13,11 @@
     color: $light-grey;
     padding: 4px 8px;
     margin-right: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     border: none;
     border-radius: 16px;
     font-weight: bold;
+    font-size: 0.875em;
     transition: $default-transition;
 
     @media (hover: hover) {
@@ -43,8 +44,8 @@
   align-items: start;
   width: 95%;
   margin-bottom: 8px;
-  margin-left: -16px;
-  padding: 8px;
+  margin-left: -24px;
+  padding: 16px;
   border-radius: 8px;
 
   .header {
@@ -53,10 +54,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 8px 8px 0px 8px;
+    padding: 0px 8px;
 
     .title {
       font-weight: bold;
+      font-size: 1.15em;
+      margin: 0px;
     }
 
     .date {
@@ -69,15 +72,18 @@
 
   .info {
     box-sizing: border-box;
-    padding: 0px 8px 8px 8px;
+    padding: 0px 8px;
     width: 100%;
 
     .company {
       font-weight: bold;
+      font-size: 1.1em;
       color: $light-grey;
+      margin-bottom: 0px;
     }
 
     .location {
+      margin-top: 0px;
       color: $light-grey;
     }
 
@@ -87,13 +93,15 @@
       justify-content: start;
       align-items: center;
       flex-wrap: wrap;
-      font-size: 14px;
+      font-size: 16px;
+      margin: 8px 0px;
 
       .skill {
         background-color: $blue;
         color: $white;
         padding: 4px 8px;
         margin-right: 8px;
+        margin-bottom: 8px;
         border: none;
         border-radius: 14px;
         text-decoration: none;
@@ -123,6 +131,7 @@
   text-decoration: none;
   font-weight: bold;
   margin-top: 12px;
+  margin-bottom: 8px;
 
   svg {
     color: $light-grey;
