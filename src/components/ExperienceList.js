@@ -64,7 +64,7 @@ export default function ExperienceList({ id, experiences }) {
                 });
             } else {
                 document.querySelectorAll(`[data-name^="${id}"]`).forEach(button => {
-                        button.classList.add("selected");
+                    button.classList.add("selected");
                 });
             }
         } else {
@@ -125,13 +125,13 @@ export default function ExperienceList({ id, experiences }) {
                 {
                     [...Object.keys(categories).map((category) => {
                         return (
-                            <button 
+                            <button
                                 id={category}
                                 data-name={id + "-" + category}
                                 onMouseEnter={(event) => handleCategoryEnter(event)}
                                 onMouseLeave={(event) => handleCategoryLeave(event)}
-                                onClick={handleCategoryToggle} 
-                                className={ categories[category] === true ? 'selected' : '' }
+                                onClick={handleCategoryToggle}
+                                className={categories[category] === true ? 'selected' : ''}
                             >
                                 {category}
                             </button>
@@ -140,14 +140,14 @@ export default function ExperienceList({ id, experiences }) {
                 }
             </div>
             {
-                Object.keys(categories).filter(category => categories[category] === true).length === 0?
+                Object.keys(categories).filter(category => categories[category] === true).length === 0 ?
                     <motion.p
                         className='no-experience'
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         layoutId={id}
                     >
-                        No {id} found
+                        Oops! Try a different filter.
                     </motion.p> :
                     categories["All"] === true ?
                         experiences.map((experience) => (

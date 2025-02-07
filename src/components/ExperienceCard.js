@@ -34,7 +34,13 @@ export default function ExperienceCard({ experience }) {
                         })
                     }
                 </div>
-                <p className='description'>{experience.description}</p>
+                <ul className='description'>{
+                    typeof experience.description === 'string' ?
+                        <li>{experience.description}</li> :
+                        experience.description.map((paragraph) => {
+                            return <li>{paragraph}</li>;
+                        })
+                }</ul>
             </div>
         </motion.div>
     );
