@@ -6,6 +6,7 @@ import "../experienceList.scss";
 import { motion } from "motion/react";
 
 import PagePill from "../Navigation/PagePill";
+import PageSection from "../PageSection";
 
 const roles = [
     {
@@ -55,19 +56,13 @@ export default function ExperiencePage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
         >
-            <div className="title-container">
-                <h1>Experience</h1>
+            <PageSection title="Experience">
                 <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
-            </div>
-            <div className="content-container">
                 <ExperienceList id="roles" experiences={roles} />
-            </div>
-            <div className="title-container">
-                <h1>Projects</h1>
-            </div>
-            <div className="content-container">
+            </PageSection>
+            <PageSection title="Projects">
                 <ExperienceList id="projects" experiences={projects} />
-            </div>
+            </PageSection>
             <PagePill left="about" middle="home" right="home" />
         </motion.div>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import ExperienceList from "../ExperienceList";
 import PagePill from "../Navigation/PagePill";
+import PageSection from "../PageSection";
 
 const education = [
     {
@@ -51,18 +52,12 @@ export default function About() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
         >
-            <div className="title-container">
-                <h1>About Me</h1>
-            </div>
-            <div className="content-container">
+            <PageSection title="About Me">
                 <p>Kia Ora, I'm Mikai Somerville, a penultimate year Computer Science student at the University of Auckland. I grew up in the small town of Katikati before coming to Auckland to pursue my passion for Computer Science and Software Development.</p>
-            </div>
-            <div className="title-container">
-                <h1>Education</h1>
-            </div>
-            <div className="content-container">
+            </PageSection>
+            <PageSection title="Education">
                 <ExperienceList id="education" experiences={education} />
-            </div>
+            </PageSection>
             <PagePill left="home" middle="experience" right="experience" />
         </motion.div>
     );
