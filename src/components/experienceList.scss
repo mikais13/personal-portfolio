@@ -60,6 +60,8 @@
       font-weight: bold;
       font-size: 1.15em;
       margin: 0px;
+      color: $white;
+      text-decoration: none;
     }
 
     .date {
@@ -130,8 +132,8 @@
   color: $light-grey;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 12px;
-  margin-bottom: 8px;
+  margin-top: -12px;
+  margin-bottom: 24px;
 
   svg {
     color: $light-grey;
@@ -168,9 +170,18 @@
   .experience-card {
     width: 100%;
     margin-left: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    @media (hover: none) {
+      padding: 16px 0px;
+    }
 
     .header {
       padding: 0px;
+
+      a {
+        padding-left: 16px;
+      }
     }
 
     .info {
@@ -192,6 +203,7 @@
 
   .resume-link {
     width: 100%;
-    margin-left: 16px;
+    padding-left: 16px;
+    box-sizing: border-box;
   }
 }

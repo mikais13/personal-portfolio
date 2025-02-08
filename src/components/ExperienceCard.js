@@ -19,7 +19,12 @@ export default function ExperienceCard({ experience }) {
             whileHover={{ backgroundColor: 'var(--grey)' }}
         >
             <div className="header">
-                <p className='title'>{experience.title}</p>
+                {
+                    experience.link == null ?
+                        <p className='title'>{experience.title}</p>
+                        :
+                        <a className='title' href={experience.link} target='_blank' rel='noreferrer'>{experience.title}</a>
+                }
                 <div className='date'>
                     <p>{date}</p>
                 </div>
