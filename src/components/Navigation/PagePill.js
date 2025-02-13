@@ -10,20 +10,20 @@ export default function PagePill({ left, middle, right }) {
     return (
         <AnimatePresence>
             <motion.div className="page-link" layoutId="page-pill" transition={{ visualDuration: 0.225, type: "spring", bounce: 0.3 }}>
-                <div className="line">
+                <div className={`line ${active != "" && "active"}`}>
                     <NavLink to={`/${left === "home" ? "" : left}`} className={`left ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("left")} onMouseLeave={() => setActive("")}>
-                        <p className="inner" layout>
+                        <p className="inner">
                             <FontAwesomeIcon icon={faArrowLeft} className="arrow" />
                             {left[0].toUpperCase() + left.slice(1)}
                         </p>
                     </NavLink>
                     <NavLink to={`/${middle === "home" ? "" : middle}`} className={`middle ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("middle")} onMouseLeave={() => setActive("")}>
-                        <p className="inner" layout>
+                        <p className="inner">
                             Next Page
                         </p>
                     </NavLink>
                     <NavLink to={`/${right === "home" ? "" : middle}`} className={`right ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("right")} onMouseLeave={() => setActive("")}>
-                        <p className="inner" layout>
+                        <p className="inner">
                             {right[0].toUpperCase() + right.slice(1)}
                             <FontAwesomeIcon icon={faArrowRight} className="arrow" />
                         </p>

@@ -95,6 +95,7 @@ header {
 
     &.active {
       color: $white;
+      font-weight: 900;
       transition: $default-transition;
 
       .line {
@@ -107,6 +108,7 @@ header {
     @media (hover: hover) {
       &:hover {
         color: $white;
+        font-weight: 1000;
         transition: $default-transition;
 
         .line {
@@ -139,7 +141,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 4em;
+  margin-bottom: 48px;
 
   .line {
     display: grid;
@@ -147,6 +149,22 @@ header {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 40px;
+    transition: $default-transition;
+
+    .middle {
+      box-shadow: 0px 4px 3px $shadow;
+      transition: $default-transition;
+    }
+
+    &.active {
+      box-shadow: 0px 20px 25px -5px $shadow, 0 8px 10px -6px $shadow;
+      transition: $default-transition;
+
+      .middle {
+        box-shadow: none;
+        transition: $default-transition;
+      }
+    }
   }
 
   a {
@@ -183,7 +201,7 @@ header {
       border-radius: 20px;
       transition: $default-transition;
 
-      & svg {
+      svg {
         transform: translateX(0px);
         transition: $default-transition;
       }
@@ -257,7 +275,7 @@ header {
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
 
-          & p:hover svg {
+          p:hover svg {
             transform: translate(25%);
             transition: $default-transition;
           }
@@ -271,7 +289,7 @@ header {
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
 
-          & p:hover svg {
+          p:hover svg {
             transform: translate(-25%);
             transition: $default-transition;
             transition-duration: infinite;

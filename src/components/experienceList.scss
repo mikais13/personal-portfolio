@@ -43,10 +43,10 @@
   justify-content: stretch;
   align-items: start;
   width: 95%;
-  margin-bottom: 8px;
-  margin-left: -24px;
-  padding: 16px;
-  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-left: -16px;
+  padding: 8px;
+  border-radius: 18px;
 
   .header {
     display: flex;
@@ -96,7 +96,7 @@
       align-items: center;
       flex-wrap: wrap;
       font-size: 16px;
-      margin: 8px 0px;
+      margin: 4px 0px;
 
       .skill {
         background-color: $blue;
@@ -115,7 +115,7 @@
       margin: 0px;
 
       li {
-        padding: 4px;
+        padding: 8px;
       }
     }
   }
@@ -192,12 +192,16 @@
       .skills {
         padding-left: 16px;
       }
-    }
 
-    .description {
-      list-style-type: none;
-      margin: 0px;
-      padding: 0px;
+      .description {
+        box-sizing: border-box;
+        list-style-type: none;
+        padding-right: 16px;
+
+        li {
+          padding: 0px;
+        }
+      }
     }
   }
 
