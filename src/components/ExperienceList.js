@@ -4,9 +4,9 @@ import { motion } from 'motion/react';
 
 export default function ExperienceList({ id, experiences }) {
     experiences = experiences.sort((a, b) => {
-        if (a.startDate < b.startDate) {
+        if (a.endDate < b.endDate) {
             return 1;
-        } else if (a.startDate > b.startDate) {
+        } else if (a.endDate > b.endDate) {
             return -1;
         } else {
             return 0;

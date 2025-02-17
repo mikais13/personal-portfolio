@@ -79,7 +79,7 @@ header {
     padding: 0px 0px;
     background-color: $black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1em;
     color: $light-grey;
     transition: $default-transition;
@@ -95,7 +95,7 @@ header {
 
     &.active {
       color: $white;
-      font-weight: 900;
+      font-weight: 800;
       transition: $default-transition;
 
       .line {
@@ -108,7 +108,7 @@ header {
     @media (hover: hover) {
       &:hover {
         color: $white;
-        font-weight: 1000;
+        font-weight: 800;
         transition: $default-transition;
 
         .line {

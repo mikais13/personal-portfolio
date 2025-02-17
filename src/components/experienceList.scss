@@ -62,6 +62,21 @@
       margin: 0px;
       color: $white;
       text-decoration: none;
+
+      svg {
+        color: $light-grey;
+        font-size: 0.9em;
+        transform: translate(0px, 1px) rotate(45deg);
+        transition: $default-transition;
+      }
+
+      @media (hover: hover) {
+        &:hover svg {
+          color: $white;
+          transform: translate(2px, -1px) rotate(45deg);
+          transition: $default-transition;
+        }
+      }
     }
 
     .date {
@@ -81,7 +96,7 @@
       font-weight: bold;
       font-size: 1.1em;
       color: $light-grey;
-      margin-bottom: 0px;
+      margin: 0px;
     }
 
     .location {
@@ -116,16 +131,14 @@
 
       li {
         padding: 8px;
+        padding-left: 0px;
       }
     }
   }
 }
 
 .no-experience {
-  color: $light-grey;
   font-weight: bold;
-  text-align: center;
-  padding-top: 16px;
 }
 
 .resume-link {
@@ -173,7 +186,8 @@
     box-sizing: border-box;
     padding: 0px;
     @media (hover: none) {
-      padding: 16px 0px;
+      padding: 0px;
+      padding-bottom: 8px;
     }
 
     .header {

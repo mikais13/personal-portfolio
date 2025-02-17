@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function ExperienceCard({ experience }) {
     var date = "";
-    if (experience.startDate != null) {
-        date += experience.startDate;
-        if (experience.endDate != null) {
-            date += " - " + experience.endDate;
+    if (experience.endDate != null) {
+        date = experience.endDate;
+        if (experience.startDate != null) {
+            date = experience.startDate + " - " + experience.endDate;
         }
     }
 
@@ -23,7 +25,7 @@ export default function ExperienceCard({ experience }) {
                     experience.link == null ?
                         <p className='title'>{experience.title}</p>
                         :
-                        <a className='title' href={experience.link} target='_blank' rel='noreferrer'>{experience.title}</a>
+                        <a className='title' href={experience.link} target='_blank' rel='noreferrer'>{experience.title} <FontAwesomeIcon icon={faArrowUp} /></a>
                 }
                 <div className='date'>
                     <p>{date}</p>

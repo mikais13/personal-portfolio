@@ -10,7 +10,7 @@ export default function PagePill({ left, middle, right }) {
     return (
         <AnimatePresence>
             <motion.div className="page-link" layoutId="page-pill" transition={{ visualDuration: 0.225, type: "spring", bounce: 0.3 }}>
-                <div className={`line ${active != "" && "active"}`}>
+                <div className={`line ${active !== "" && "active"}`}>
                     <NavLink to={`/${left === "home" ? "" : left}`} className={`left ${active !== "" ? "active" : ""}`} onMouseEnter={() => setActive("left")} onMouseLeave={() => setActive("")}>
                         <p className="inner">
                             <FontAwesomeIcon icon={faArrowLeft} className="arrow" />

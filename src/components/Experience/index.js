@@ -16,11 +16,12 @@ const roles = [
         location: "Te Puke, New Zealand",
         startDate: "Nov 2024",
         endDate: "Feb 2025",
-        skills: ["Python", "OpenCV", "Research and Development", "Data Analysis", "Excel"],
+        skills: ["Python", "OpenCV", "NumPy", "Research and Development", "Data Analysis", "Excel"],
         description: [
-            "Developed industry-first computer vision scripts in Python using OpenCV to find the size of kiwifruit with 100% accuracy using RGB-D imaging.",
-            "Completed research project including literature review, report and presentation to business leaders.",
-            "Assisted experiential trial of kiwifruit biostimulants, performing data analysis using Excel"
+            "Developed an industry-first computer vision program using OpenCV and Python as a proof-of-concept to find kiwifruit size using RGB-D imaging technology.",
+            "Conducted a research project, including a literature review, scientific report and presentation.",
+            "Performed data analysis on all parts of the project using Excel.",
+            "As a part of my project, I also aided in experimental trials for products, such as kiwifruit biostimulants, and spent time in the retail store and with technical representatives."
         ]
     }
 ];
@@ -28,22 +29,37 @@ const roles = [
 const projects = [
     {
         title: "Portfolio Website",
-        link: "https://www.github.com/mikais13",
+        link: "https://github.com/mikais13/personal-portfolio",
         categories: ["Web Development", "Personal"],
         startDate: "2024",
         endDate: "Present",
-        skills: ["React", "JavaScript", "HTML", "CSS", "SASS", "React-Router"],
-        description: "A simple portfolio website to showcase my experience and projects. "
+        skills: ["React", "JavaScript", "Sass", "React Router", "Motion", "HTML", "CSS"],
+        description: [
+            "Developed this portfolio website to showcase more about myself, my skills, and experiences.",
+            "Designed and developed a responsive website using React with React Router, and Sass, along with Motion.",
+            "Deployed using Vercel and a custom domain."
+        ],
+    },
+    {
+        title: "Sequence",
+        link: "https://github.com/mikais13/Sequence-CS130",
+        categories: ["Desktop App", "Academic"],
+        endDate: "Oct 2024",
+        skills: ["Python", "Tkinter"],
+        description: [
+            "Developed a GUI desktop application for a Connect-4 style game according to the COMPSCI 130 assignment specifications.",
+            "Implemented a GUI using Tkinter, and a game engine using Python."
+        ]
     },
     {
         title: "Club Management System",
-        link: "https://php.kkc.school.nz/CHG/2023_Y13%20Exemplars/AS91902/",
+        link: "https://github.com/mikais13/Club-Management-Dashboard",
         categories: ["Academic", "Web Development"],
-        startDate: "2023",
+        endDate: "2023",
         skills: ["PHP", "SQL", "JavaScript", "HTML", "CSS", "Bootstrap"],
         description: [
             "A full-stack web application to manage school clubs, including a database, login system, and CRUD operations.",
-            "My project for AS91902, the NCEA Level 3 standard 'Use complex techniques to develop a database'."
+            "My project for one of my Year 13 Digital Technology assessments."
         ]
     }
 ];
