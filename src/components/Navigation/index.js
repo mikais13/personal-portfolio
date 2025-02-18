@@ -43,7 +43,7 @@ export default function Navigation() {
                 <a className="nav-link logo-link" href="https://github.com/mikais13" title="Github" alt="GitHub">
                     <FontAwesomeIcon icon={faSquareGithub} />
                 </a>
-                <a className="nav-link logo-link" href="" title="Resume" alt="Resume">
+                <a className="nav-link logo-link" href="/Mikai_Somerville_Resume.pdf" title="Resume" alt="Resume">
                     <FontAwesomeIcon icon={faFile} />
                 </a>
             </div>

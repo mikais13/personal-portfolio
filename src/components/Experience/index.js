@@ -73,7 +73,7 @@ export default function ExperiencePage() {
             animate={{ opacity: 1, y: 0 }}
         >
             <PageSection title="Experience">
-                <a href="" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
+                <a href="/Mikai_Somerville_Resume.pdf" className="resume-link">View Full Resume <FontAwesomeIcon icon={faArrowUp} /></a>
                 <ExperienceList id="roles" experiences={roles} />
             </PageSection>
             <PageSection title="Projects">
