@@ -1,0 +1,38 @@
+@use "../../utils/variables" as *;
+
+h2 {
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  color: $light-grey;
+}
+
+.summary-list {
+  display: flex;
+  max-width: 640px;
+  overflow-x: auto;
+
+  .summary-card {
+    margin-right: 16px;
+    padding: 32px;
+    border-radius: 18px;
+    background-color: $blue;
+    text-align: center;
+
+    h2,
+    h3 {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    p {
+      margin-top: 16px;
+    }
+  }
+}

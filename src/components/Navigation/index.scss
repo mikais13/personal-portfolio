@@ -141,6 +141,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 16px;
   margin-bottom: 48px;
 
   .line {
@@ -390,6 +391,9 @@ header {
 
       @media (hover: hover) {
         &:hover {
+          &:not(.active) {
+            font-weight: 600;
+          }
           transition: $default-transition;
         }
       }
