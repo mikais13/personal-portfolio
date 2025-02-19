@@ -13,26 +13,40 @@ h3 {
   color: $light-grey;
 }
 
-.summary-list {
-  display: flex;
+.summary-list-container {
   max-width: 640px;
-  overflow-x: auto;
+  overflow-x: hidden;
 
-  .summary-card {
-    margin-right: 16px;
-    padding: 32px;
-    border-radius: 18px;
-    background-color: $blue;
-    text-align: center;
+  .summary-list {
+    display: flex;
+    overflow-x: visible;
 
-    h2,
-    h3 {
-      font-weight: 700;
-      white-space: nowrap;
-    }
+    .summary-card {
+      margin-right: 16px;
+      padding: 32px 16px;
+      border-radius: 18px;
+      background-color: $blue;
+      text-align: center;
 
-    p {
-      margin-top: 16px;
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 16px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        h2,
+        h3 {
+          margin: 0px;
+        }
+      }
+
+      p {
+        margin-top: 8px;
+        margin-right: 0px;
+      }
     }
   }
 }

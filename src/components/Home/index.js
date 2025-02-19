@@ -11,7 +11,7 @@ export default function Home() {
     {
       title: "R&D Intern",
       company: "PGG Wrightson",
-      description: "Researched a possible application of Computer Vision in the horticulture industry",
+      description: "Developed a possible application of Computer Vision in the horticulture industry",
 
     },
     {
