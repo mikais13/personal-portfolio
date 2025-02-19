@@ -4,19 +4,8 @@ import { wrap } from 'popmotion';
 
 export default function SummaryList({ id, summaries }) {
   const [hovering, setHovering] = useState(false);
-  // const baseX = useMotionValue(0);
   const carouselRef = useRef(null);
-  // const { scrollX } = useScroll({
-  //   container: carouselRef,
-  //   axis: 'x',
-  // });
-  // const x = useTransform(scrollX, (value) => value + baseX.get());
-  // useAnimationFrame(() => {
-  //   if (!hovering) {
-  //     baseX.set(baseX.get() + 0.5);
-  //   }
-  // });
-  const baseVelocity = 15;
+  const baseVelocity = -10;
   const baseX = useMotionValue(0);
   const { scrollX } = useScroll({
     container: carouselRef,
@@ -31,10 +20,9 @@ export default function SummaryList({ id, summaries }) {
     clamp: false
   });
   const x = useTransform(baseX, (v) => `${wrap(0, -100, v)}%`);
-
   useAnimationFrame((time, delta) => {
     if (hovering) {
-      baseX.set(baseX.get() + 0.5);
+      baseX.set(baseX.get() + scrollVelocity.get());
     } else {
       let moveBy = baseVelocity * (delta / 1000);
       moveBy += moveBy * velocityFactor.get();
@@ -45,7 +33,6 @@ export default function SummaryList({ id, summaries }) {
   return (
     <div
       className='summary-list-container'
-      onHover={() => setHovering(true)} onHoverEnd={() => setHovering(false)}
     >
       <motion.div
         id={id}
@@ -54,6 +41,8 @@ export default function SummaryList({ id, summaries }) {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         style={{ x }}
+        onHoverStart={() => setHovering(true)}
+        onHoverEnd={() => setHovering(false)}
       >
         {
           summaries.map((summary) => {
@@ -61,17 +50,7 @@ export default function SummaryList({ id, summaries }) {
           })
         }
         {
-          summaries.map((summary) => {
-            return <SummaryCard key={summary.title} experience={summary} />;
-          })
-        }
-        {
-          summaries.map((summary) => {
-            return <SummaryCard key={summary.title} experience={summary} />;
-          })
-        }
-        {
-          summaries.map((summary) => {
+          summaries.reverse().map((summary) => {
             return <SummaryCard key={summary.title} experience={summary} />;
           })
         }
