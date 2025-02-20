@@ -1,8 +1,7 @@
-import React, { useRef, useLayoutEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import React, { useRef, useLayoutEffect, useEffect, useState } from 'react';
+import { motion, useInView, useAnimate } from 'motion/react';
 
-export default function SummaryListCarousel({ summaries }) {
-
+export default function SummaryCarousel({ summaries }) {
   return (
     <div className='summary-list-container'>
       <SummarySet id='set-1' summaries={summaries} />
@@ -32,26 +31,44 @@ export function SummarySet({ id, summaries }) {
     >
       {
         summaries.map((summary) => {
-          return <SummaryCard key={summary.title} experience={summary} />;
+          return <SummaryCard key={summary.title} experience={summary} parentRef={set} />;
         })
       }
     </motion.div>
   );
 }
 
-export function SummaryCard({ experience }) {
+export function SummaryCard({ experience, parentRef }) {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { margin: "0px 0px 0px -50px", initial: true, amount: 0.1 });
+  useEffect(() => {
+    if (isInView) {
+      const enterAnimation = async () => {
+        await animate(scope.current, { scale: 1, x: 0 });
+      }
+      enterAnimation();
+    } else {
+      const exitAnimation = async () => {
+        await animate(scope.current, { scale: 0, x: -32 });
+      }
+      exitAnimation();
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
+
   return (
-    <motion.div
-      className='summary-card'
-      initial={{ x: 32, y: 16, scale: 0.8 }}
-      animate={{ x: 0 }}
-      whileInView={{ x: 0, y: 0, scale: 1 }}
-    >
-      <div className='title'>
-        <h2>{experience.title}</h2>
-        <h3>{experience.company && experience.company}</h3>
-      </div>
-      <p>{experience.description}</p>
-    </motion.div>
+    <div ref={parentRef} className='outer'>
+      <motion.div
+        ref={scope}
+        className='summary-card'
+        initial={{ x: 32, scale: 0 }}
+      >
+        <div className='title'>
+          <h2>{experience.title}</h2>
+          <h3>{experience.company && experience.company}</h3>
+        </div>
+        <p>{experience.description}</p>
+      </motion.div>
+    </div>
   );
 }
