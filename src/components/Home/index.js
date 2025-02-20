@@ -11,7 +11,7 @@ export default function Home() {
     {
       title: "R&D Intern",
       company: "PGG Wrightson",
-      description: "Developed a possible application of Computer Vision in the horticulture industry",
+      description: "Researched a possible application of Computer Vision in the horticulture industry",
 
     },
     {
@@ -35,25 +35,25 @@ export default function Home() {
 
   return (
     <motion.div
-      className="page-container"
+      className="home page-container"
       layoutId="page"
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
     >
       <PageSection title="Kia Ora!">
-        <h2>
+        <h2 className="intro">
           I'm Mikai,
         </h2>
-        <h3>
+        <h3 className="intro">
           A University of Auckland Computer Science Student
         </h3>
-        <p>
+        <p className="intro">
           Welcome to my portfolio!
         </p>
-        <p>
+        <p className="intro">
           I'm a current penultimate year Computer Science student at The University of Auckland, with a passion for solving problems and creating things through code.
         </p>
-        <p>
+        <p className="intro">
           Last summer, I was fortunate enough to work as a R&D Intern at PGG Wrightson
         </p>
       </PageSection>
