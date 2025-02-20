@@ -1,55 +1,83 @@
 @use "../../utils/variables" as *;
 
-h2 {
-  font-weight: 600;
-  margin-top: 0px;
-  margin-bottom: 4px;
-}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
 
-h3 {
-  font-weight: 600;
-  margin-top: 0px;
-  margin-bottom: 16px;
-  color: $light-grey;
-}
-
-.summary-list-container {
-  max-width: 640px;
-  overflow-x: auto;
-  &::-webkit-scrollbar {
-    display: none;
+  h2 {
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 4px;
   }
 
-  .summary-list {
+  h3 {
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    color: $light-grey;
+  }
+
+  .summary-list-container {
     display: flex;
-    overflow-x: visible;
-    gap: 16px;
+    justify-content: start;
+    align-items: center;
+    max-width: 640px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-    .summary-card {
-      padding: 32px 16px;
-      border-radius: 18px;
-      background-color: $blue;
-      text-align: center;
+    .summary-list {
+      display: flex;
+      overflow-x: visible;
 
-      .title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0px 16px;
-        font-weight: 700;
-        white-space: nowrap;
+      .summary-card {
+        padding: 32px 16px;
+        margin-right: 16px;
+        border-radius: 18px;
+        background-color: $blue;
+        text-align: center;
 
-        h2,
-        h3 {
-          margin: 0px;
+        .title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0px 16px;
+          font-weight: 700;
+          white-space: nowrap;
+
+          h2,
+          h3 {
+            margin: 0px;
+          }
+        }
+
+        p {
+          margin: 8px 0px;
+          padding: 0px;
         }
       }
+    }
+  }
 
-      p {
-        margin-top: 8px;
-        margin-right: 0px;
-      }
+  @media screen and (max-width: 800px) {
+    .intro {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0px 16px 0px;
+    }
+
+    p.intro {
+      margin-left: 16px;
+    }
+
+    .summary-list-container {
+      max-width: 800px;
     }
   }
 }

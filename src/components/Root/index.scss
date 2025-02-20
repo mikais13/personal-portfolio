@@ -55,6 +55,8 @@ body {
 
     h1 {
       font-size: 2.2em;
+      margin: 6px 16px 6px 0px;
+      color: $white;
     }
   }
 
@@ -74,11 +76,6 @@ body {
       line-height: 1.25em;
       font-size: 1.05em;
     }
-  }
-
-  h1 {
-    margin: 16px 16px 6px 0px;
-    color: $white;
   }
 }
 

@@ -139,25 +139,27 @@ export default function ExperienceList({ id, experiences }) {
                     })]
                 }
             </div>
-            {
-                Object.keys(categories).filter(category => categories[category] === true).length === 0 ?
-                    <motion.p
-                        className='no-experience'
-                        initial={{ opacity: 0, y: 16 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        layoutId={id}
-                    >
-                        Oops! Try a different filter.
-                    </motion.p> :
-                    categories["All"] === true ?
-                        experiences.map((experience) => (
-                            <ExperienceCard experience={experience} />
-                        ))
-                        :
-                        experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
-                            <ExperienceCard experience={experience} />
-                        ))
-            }
+            <div className="experience-list">
+                {
+                    Object.keys(categories).filter(category => categories[category] === true).length === 0 ?
+                        <motion.p
+                            className='no-experience'
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            layoutId={id}
+                        >
+                            Oops! Try a different filter.
+                        </motion.p> :
+                        categories["All"] === true ?
+                            experiences.map((experience) => (
+                                <ExperienceCard experience={experience} />
+                            ))
+                            :
+                            experiences.filter(experience => experience.categories.some(category => categories[category] === true)).map((experience, index) => (
+                                <ExperienceCard experience={experience} />
+                            ))
+                }
+            </div>
         </>
     );
 }

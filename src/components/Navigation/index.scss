@@ -213,6 +213,7 @@ header {
     a {
       margin-left: 0px;
       margin-right: 0px;
+      white-space: nowrap;
 
       &.left p,
       &.right p {
@@ -235,7 +236,7 @@ header {
         }
       }
 
-      @media screen and (max-width: 850px) {
+      @media screen and (max-width: 850px) and (min-width: 800px) {
         .arrow {
           display: none;
         }
@@ -333,7 +334,6 @@ header {
     width: 100vw;
     height: auto;
     padding: 8px 0px 8px 0px;
-    margin-bottom: 16px;
 
     .top {
       position: relative;
