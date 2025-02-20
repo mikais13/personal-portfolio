@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from 'motion/react';
 import PagePill from "../Navigation/PagePill";
 import PageSection from "../PageSection";
-import SummaryList from "./SummaryList";
+import SummaryCarousel from "./SummaryCarousel";
 import "./index.scss";
 
 
@@ -58,7 +58,7 @@ export default function Home() {
         </p>
       </PageSection>
       <PageSection title="At a Glance">
-        <SummaryList id="skills" summaries={summaries} />
+        <SummaryCarousel summaries={summaries} />
       </PageSection>
       <PagePill left="experience" middle="about" right="about" />
     </motion.div>
