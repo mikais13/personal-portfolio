@@ -25,6 +25,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    width: 100%;
     max-width: 640px;
     overflow-x: auto;
     &::-webkit-scrollbar {
@@ -78,6 +79,7 @@
 
     .summary-list-container {
       max-width: 800px;
+      margin-left: 16px;
     }
   }
 }
