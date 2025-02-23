@@ -4,15 +4,62 @@ import "./index.scss";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "motion/react";
+import { delay } from "motion";
 
 export default function Navigation() {
     const { pathname } = useLocation();
+    const sentenceVariants = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.125,
+                staggerChildren: 0.125
+            }
+        }
+    }
+    const letterVariants = {
+        hidden: {
+            opacity: 0,
+            y: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.75
+            }
+        }
+    }
     return (
         <header>
             <div className="top">
                 <div className={"start"}>
                     <NavLink to="/">
-                        <h1><code><div>Mikai</div><div>Somerville</div></code></h1>
+                        <motion.h1
+                            variants={sentenceVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <code>
+                                <div>
+                                    {/* <h1><code><div>Mikai</div><div>Somerville</div></code></h1> */}
+                                    {
+                                        "Mikai".split("").map((letter, i) => (
+                                            <motion.span key={letter + "-" + i} variants={letterVariants}>{letter}</motion.span>
+                                        ))
+                                    }
+                                </div>
+                                <div>
+                                    {
+                                        "Somerville".split("").map((letter, i) => (
+                                            <motion.span key={letter + "-" + i} variants={letterVariants}>{letter}</motion.span>
+                                        ))
+                                    }
+                                </div>
+                            </code>
+                        </motion.h1>
                     </NavLink>
                 </div>
                 <div className="middle">
@@ -47,6 +94,6 @@ export default function Navigation() {
                     <FontAwesomeIcon icon={faFile} />
                 </a>
             </div>
-        </header>
+        </header >
     );
 }
