@@ -5,7 +5,6 @@ import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "motion/react";
-import { delay } from "motion";
 
 export default function Navigation() {
     const { pathname } = useLocation();

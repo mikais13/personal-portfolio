@@ -13,16 +13,21 @@ export default function ExperienceCard({ experience }) {
     }
 
     const skillShake = {
+        initial: {
+            y: 0
+        },
         rest: {
-            x: 0,
+            y: 0,
             transition: {
-                duration: 0.5
+                duration: 0.75
             }
         },
         hover: {
-            x: [0, -2, 3, 0],
+            y: [0, -4, 2, 0],
             transition: {
-                duration: 0.5
+                duration: 0.75,
+                type: 'tween',
+                ease: 'easeInOut',
             }
         }
     }
@@ -50,7 +55,7 @@ export default function ExperienceCard({ experience }) {
                 duration: 0.25,
                 type: 'tween',
                 ease: 'easeInOut',
-                staggerChildren: 0.025,
+                staggerChildren: 0.075,
             },
         }
     }
@@ -59,7 +64,7 @@ export default function ExperienceCard({ experience }) {
         <motion.div
             className='experience-card'
             key={experience.title}
-            initial='rest'
+            initial='initial'
             animate='rest'
             whileHover='hover'
             variants={backgroundEffects}
