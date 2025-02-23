@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "../experienceList.scss";
 import { motion } from "motion/react";
-
 import PagePill from "../Navigation/PagePill";
 import PageSection from "../PageSection";
 
@@ -58,8 +57,19 @@ const projects = [
         endDate: "2023",
         skills: ["PHP", "SQL", "JavaScript", "HTML", "CSS", "Bootstrap"],
         description: [
-            "A full-stack web application to manage school clubs, including a database, login system, and CRUD operations.",
+            "Built a full-stack web application to manage school clubs, including a database, login system, and CRUD operations.",
             "My project for one of my Year 13 Digital Technology assessments."
+        ]
+    },
+    {
+        title: "Gem Runner",
+        link: "https://github.com/mikais13/Gem-Runner",
+        categories: ["Desktop App", "Academic"],
+        endDate: "2023",
+        skills: ["Java", "JavaFX"],
+        description: [
+            "Developed a desktop game where players navigate through obstacles while collecting gems.",
+            "My project for one of my NCEA Level 3 Digital Technology assessments that I did in Year 12."
         ]
     }
 ];
