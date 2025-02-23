@@ -12,20 +12,64 @@ export default function ExperienceCard({ experience }) {
         }
     }
 
+    const skillShake = {
+        rest: {
+            x: 0,
+            transition: {
+                duration: 0.5
+            }
+        },
+        hover: {
+            x: [0, -2, 3, 0],
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+
+    const backgroundEffects = {
+        initial: {
+            opacity: 0,
+            y: 16
+        },
+        rest: {
+            opacity: 1,
+            y: 0,
+            backgroundColor: 'var(--black)',
+            boxShadow: '0 20px 25px -5px var(--black), 0 8px 10px -6px var(--black)',
+            transition: {
+                duration: 0.25,
+                type: 'tween',
+                ease: 'easeInOut'
+            }
+        },
+        hover: {
+            backgroundColor: 'var(--grey)',
+            boxShadow: '0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow)',
+            transition: {
+                duration: 0.25,
+                type: 'tween',
+                ease: 'easeInOut',
+                staggerChildren: 0.025,
+            },
+        }
+    }
+
     return (
         <motion.div
             className='experience-card'
             key={experience.title}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ backgroundColor: 'var(--grey)', boxShadow: '0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow)' }}
+            initial='rest'
+            animate='rest'
+            whileHover='hover'
+            variants={backgroundEffects}
         >
             <div className="header">
                 {
                     experience.link == null ?
                         <p className='title'>{experience.title}</p>
                         :
-                        <a className='title' href={experience.link} target='_blank' rel='noreferrer'>{experience.title} <FontAwesomeIcon icon={faArrowUp} /></a>
+                        <a className='title' href={experience.link}>{experience.title} <FontAwesomeIcon icon={faArrowUp} /></a>
                 }
                 <div className='date'>
                     <p>{date}</p>
@@ -37,7 +81,7 @@ export default function ExperienceCard({ experience }) {
                 <div className='skills'>
                     {
                         experience.skills.map((skill) => {
-                            return <p id={skill} className='skill'>{skill}</p>;
+                            return <motion.p id={skill} className='skill' variants={skillShake}>{skill}</motion.p>;
                         })
                     }
                 </div>
@@ -49,6 +93,6 @@ export default function ExperienceCard({ experience }) {
                         })
                 }</ul>
             </div>
-        </motion.div>
+        </motion.div >
     );
 }
