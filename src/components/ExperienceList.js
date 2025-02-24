@@ -131,10 +131,6 @@ export default function ExperienceList({ id, experiences }) {
                                 onMouseEnter={(event) => handleCategoryEnter(event)}
                                 onMouseLeave={(event) => handleCategoryLeave(event)}
                                 onClick={handleCategoryToggle}
-                                initial={{ scale: 1, transition: { duration: 0.01 } }}
-                                animate={{ scale: 1, transition: { duration: 0.01 } }}
-                                whileHover={{ scale: 1.05, transition: { duration: 0.01 } }}
-                                whileTap={{ scale: 0.1 }}
                                 className={categories[category] === true ? 'selected' : ''}
                             >
                                 {category}

@@ -31,6 +31,30 @@ export default function Navigation() {
             }
         }
     }
+    const linkContainerVariants = {
+        hidden: {
+            opacity: 1,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 1.75,
+                staggerChildren: 0.25,
+                staggerDirection: pathname === "/experience" ? -1 : 1
+            }
+        }
+    }
+    const linkVariants = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 1.25
+            }
+        }
+    }
     return (
         <header>
             <div className="top">
@@ -43,7 +67,6 @@ export default function Navigation() {
                         >
                             <code>
                                 <div>
-                                    {/* <h1><code><div>Mikai</div><div>Somerville</div></code></h1> */}
                                     {
                                         "Mikai".split("").map((letter, i) => (
                                             <motion.span key={letter + "-" + i} variants={letterVariants}>{letter}</motion.span>
@@ -61,26 +84,40 @@ export default function Navigation() {
                         </motion.h1>
                     </NavLink>
                 </div>
-                <div className="middle">
-                    <div className={`nav-link ${pathname === "/" ? "active" : ""}`}>
+                <motion.div
+                    className="middle"
+                    variants={linkContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    <motion.div
+                        className={`nav-link ${pathname === "/" ? "active" : ""}`}
+                        variants={linkVariants}
+                    >
                         <NavLink to="/">
                             <div className="line"></div>
                             <p>Home</p>
                         </NavLink>
-                    </div>
-                    <div className={`nav-link ${pathname === "/about" ? "active" : ""}`}>
+                    </motion.div>
+                    <motion.div
+                        className={`nav-link ${pathname === "/about" ? "active" : ""}`}
+                        variants={linkVariants}
+                    >
                         <NavLink to="/about">
                             <div className="line"></div>
                             <p>About Me</p>
                         </NavLink>
-                    </div>
-                    <div className={`nav-link ${pathname === "/experience" ? "active" : ""}`}>
+                    </motion.div>
+                    <motion.div
+                        className={`nav-link ${pathname === "/experience" ? "active" : ""}`}
+                        variants={linkVariants}
+                    >
                         <NavLink to="/experience">
                             <div className="line"></div>
                             <p>Experience</p>
                         </NavLink>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
             <div className="end">
                 <a className="nav-link logo-link" href="https://linkedin.com/in/mikaisomerville" title="LinkedIn" alt="LinkedIn">
@@ -93,6 +130,6 @@ export default function Navigation() {
                     <FontAwesomeIcon icon={faFile} />
                 </a>
             </div>
-        </header >
+        </header>
     );
 }
