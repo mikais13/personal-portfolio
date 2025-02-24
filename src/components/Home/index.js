@@ -5,31 +5,29 @@ import PageSection from "../PageSection";
 import SummaryCarousel from "./SummaryCarousel";
 import "./index.scss";
 
-
 export default function Home() {
   const summaries = [
     {
       title: "R&D Intern",
       company: "PGG Wrightson",
-      description: "Researched a possible application of Computer Vision in the horticulture industry",
-
+      description: "I researched Computer Vision applications in horticulture and built an industry-first program"
     },
     {
-      title: "CS Student",
+      title: "Compsci Student",
       company: "University of Auckland",
-      description: "A penultimate year student studying a Bachelor of Science majoring in Computer Science",
+      description: "I am a penultimate-year student pursuing a Bachelor of Science majoring in Computer Science"
     },
     {
       title: "Sports Fan",
-      description: "I love to watch and play sports, especially football, basketball, and golf",
+      description: "I love watching and playing sports, especially football, basketball, and golf"
     },
     {
       title: "Footballer",
-      description: "I have played football for as long as I can remember",
+      description: "I have played football for as long as I can remember, whether for club, school, or social teams"
     },
     {
       title: "Music Lover",
-      description: "I love listening to music and have begun collecting vinyl records",
+      description: "I'm almost always listening to music from a broad range of genres, but I truly love hip-hop. I have also started collecting records"
     }
   ];
 
