@@ -1,6 +1,5 @@
 import React, { useRef, useLayoutEffect, useEffect, useState } from 'react';
 import { motion, useInView, useAnimate } from 'motion/react';
-
 export default function SummaryCarousel({ summaries }) {
   return (
     <div className='summary-list-container'>
@@ -18,7 +17,7 @@ export function SummarySet({ id, summaries }) {
     if (set.current) {
       setWidth(set.current.scrollWidth);
     }
-  }, []);
+  }, [set]);
 
   return (
     <motion.div
@@ -27,7 +26,8 @@ export function SummarySet({ id, summaries }) {
       className='summary-list'
       initial={{ x: 0 }}
       animate={{ x: -width }}
-      transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
+      transition={{ duration: 15, delay: 2.5, ease: [0.36, 0.05, 0.425, 0.85], repeat: Infinity }}
+      layoutId={id}
     >
       {
         summaries.map((summary) => {
@@ -39,20 +39,17 @@ export function SummarySet({ id, summaries }) {
 }
 
 export function SummaryCard({ experience, parentRef }) {
+  const [loaded, setLoaded] = useState(false);
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { margin: "0px 0px 0px -50px", initial: true, amount: 0.1 });
+  const isInView = useInView(scope, { initial: true, amount: 0.5 });
   useEffect(() => {
-    if (isInView) {
-      const enterAnimation = async () => {
-        await animate(scope.current, { scale: 1, x: 0 });
-      }
-      enterAnimation();
-    } else {
-      const exitAnimation = async () => {
-        await animate(scope.current, { scale: 0, x: -32 });
-      }
+    const exitAnimation = async () => {
+      await animate(scope.current, { opacity: [null, 0.2, 1, 1], scale: [null, 0.5, 1, 1], x: [null, -100, -100, 0] }, { times: [0, 0.175, 0.9, 1], duration: 3 });
+    }
+    if (loaded && !isInView) {
       exitAnimation();
     }
+    setLoaded(true);
     // eslint-disable-next-line
   }, [isInView]);
 
@@ -61,7 +58,8 @@ export function SummaryCard({ experience, parentRef }) {
       <motion.div
         ref={scope}
         className='summary-card'
-        initial={{ x: 32, scale: 0 }}
+        initial={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25, type: 'tween', ease: 'easeOut' }}
       >
         <div className='title'>
           <h2>{experience.title}</h2>
@@ -69,6 +67,6 @@ export function SummaryCard({ experience, parentRef }) {
         </div>
         <p>{experience.description}</p>
       </motion.div>
-    </div>
+    </div >
   );
 }

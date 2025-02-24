@@ -27,19 +27,21 @@
     align-items: center;
     width: 100%;
     max-width: 640px;
-    padding-bottom: 50px;
-    overflow-x: auto;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    margin: -16px 0px;
+    overflow-x: hidden;
+    overflow-y: visible;
 
     .summary-list {
       display: flex;
       overflow-x: visible;
+      overflow-y: visible;
+      z-index: 99;
+      padding: 16px 0px;
 
       .outer {
         height: 100%;
         width: 100%;
+        z-index: 100;
 
         .summary-card {
           flex: 1 0 auto;
@@ -48,11 +50,13 @@
           border-radius: 18px;
           background-color: $blue;
           text-align: left;
-          display: grid;
-          grid-template-rows: 1fr 2fr;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: stretch;
           gap: 8px;
           padding: 16px;
-          height: 10em;
+          height: 9.5em;
           box-shadow: 0px 20px 25px -5px $shadow, 0 8px 10px -6px $shadow;
 
           .title {
