@@ -24,7 +24,7 @@ const education = [
         company: "University of Auckland",
         location: "Auckland, New Zealand",
         endDate: "2023",
-        skills: ["Mathematics"],
+        skills: ["Mathematics", "MATLAB"],
         description: "Earned an A+ in MATHS 199: Advancing in Mathematics."
     },
     {

@@ -52,7 +52,10 @@ export default function Home() {
           I'm a current penultimate year Computer Science student at The University of Auckland, with a passion for solving problems and creating things through code.
         </p>
         <p className="intro">
-          Last summer, I was fortunate enough to work as a R&D Intern at PGG Wrightson
+          Last summer, I was fortunate enough to work as a R&D Intern at PGG Wrightson, where I had the opportunity to improve my skills with Python, and expose myself to Computer Vision concepts and applications.
+        </p>
+        <p className="intro">
+          I am always looking for new opportunities to learn and grow, so feel free to reach out on LinkedIn if you have any questions or opportunities!
         </p>
       </PageSection>
       <PageSection title="At a Glance">
