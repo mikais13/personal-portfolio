@@ -27,7 +27,7 @@ export default function Home() {
     },
     {
       title: "Music Lover",
-      description: "I'm almost always listening to music from a broad range of genres, but I truly love hip-hop. I have also started collecting records"
+      description: "I'm almost always listening to music from a broad range of genres, but I truly love hip-hop. I have also started collecting vinyl records"
     }
   ];
 

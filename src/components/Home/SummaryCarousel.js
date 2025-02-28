@@ -26,7 +26,7 @@ export function SummarySet({ id, summaries }) {
       className='summary-list'
       initial={{ x: 0 }}
       animate={{ x: -width }}
-      transition={{ duration: 15, delay: 2.5, ease: [0.36, 0.05, 0.425, 0.85], repeat: Infinity }}
+      transition={{ duration: 17.5, delay: 2.5, ease: [0.36, 0.05, 0.425, 0.85], repeat: Infinity, repeatDelay: 1.25 }}
       layoutId={id}
     >
       {
@@ -44,7 +44,7 @@ export function SummaryCard({ experience, parentRef }) {
   const isInView = useInView(scope, { initial: true, amount: 0.5 });
   useEffect(() => {
     const exitAnimation = async () => {
-      await animate(scope.current, { opacity: [null, 0.2, 1, 1], scale: [null, 0.5, 1, 1], x: [null, -100, -100, 0] }, { times: [0, 0.175, 0.9, 1], duration: 3 });
+      await animate(scope.current, { opacity: [null, 0.2, 1, 1], scale: [null, 0.5, 1, 1], x: [null, -100, -100, 0] }, { times: [0, 0.1, 0.9, 1], duration: 5 });
     }
     if (loaded && !isInView) {
       exitAnimation();
