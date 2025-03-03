@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import ExperiencePage from '../components/Experience';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 import './App.scss';
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -24,6 +25,7 @@ function App() {
     <>
       <RouterProvider router={router} />
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
