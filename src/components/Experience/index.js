@@ -40,6 +40,17 @@ const projects = [
         ],
     },
     {
+        title: "Premier League Match Predictor",
+        link: "https://www.github.com/mikais13/epl-match-predictor",
+        categories: ["AI/ML", "Personal"],
+        endDate: "Mar 2025",
+        skills: ["Python", "Pandas", "Scikit-learn", "BeautifulSoup", "Machine Learning", "Web Scraping", "Data Analysis"],
+        description: [
+            "Implemented a Random Forest Machine Learning model through Scikit-learn in Python, to predict the outcome of Premier League matches, improving accuracy to 64%.",
+            "Performed web scraping using BeautifulSoup to gather data, captured in Pandas, about Premier League matches."
+        ],
+    },
+    {
         title: "Sequence",
         link: "https://github.com/mikais13/Sequence-CS130",
         categories: ["Desktop App", "Academic"],
