@@ -10,8 +10,8 @@ const education = [
         categories: ["Tertiary"],
         company: "University of Auckland",
         location: "Auckland, New Zealand",
-        startDate: "2024",
-        endDate: "2026",
+        startDate: 2024,
+        endDate: 2026,
         skills: ["Computer Science", "Mathematics", "Statistics"],
         description: [
             "Currently studying my penultimate year of a Bachelor of Science majoring in Computer Science.",
@@ -23,7 +23,7 @@ const education = [
         categories: ["Tertiary"],
         company: "University of Auckland",
         location: "Auckland, New Zealand",
-        endDate: "2023",
+        endDate: 2023,
         skills: ["Mathematics", "MATLAB"],
         description: "Earned an A+ in MATHS 199: Advancing in Mathematics."
     },
@@ -32,8 +32,8 @@ const education = [
         categories: ["Secondary"],
         company: "Katikati College",
         location: "Katikati, Bay of Plenty, New Zealand",
-        startDate: "2017",
-        endDate: "2023",
+        startDate: 2017,
+        endDate: 2023,
         skills: ["Computer Science", "Mathematics", "Biology", "Physics", "Chemistry"],
         description: [
             "Achieved Outstanding Scholarship (Top 27 Students) in Biology, and Scholarship (Top 236 Students) in Physics).",

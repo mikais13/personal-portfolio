@@ -13,8 +13,8 @@ const roles = [
         categories: ["Internship", "Professional", "Research"],
         company: "PGG Wrightson",
         location: "Te Puke, New Zealand",
-        startDate: "Nov 2024",
-        endDate: "Feb 2025",
+        startDate: new Date(2024, 10),
+        endDate: new Date(2025, 1),
         skills: ["Python", "OpenCV", "NumPy", "Research and Development", "Data Analysis", "Excel"],
         description: [
             "Developed an industry-first computer vision program using OpenCV and Python as a proof-of-concept to find kiwifruit size using RGB-D imaging technology.",
@@ -30,7 +30,7 @@ const projects = [
         title: "Portfolio Website",
         link: "https://github.com/mikais13/personal-portfolio",
         categories: ["Web Development", "Personal"],
-        startDate: "2024",
+        startDate: new Date(2024, 10),
         endDate: "Present",
         skills: ["React", "JavaScript", "Sass", "React Router", "Motion", "HTML", "CSS"],
         description: [
@@ -43,7 +43,7 @@ const projects = [
         title: "Premier League Match Predictor",
         link: "https://www.github.com/mikais13/epl-match-predictor",
         categories: ["AI/ML", "Personal"],
-        endDate: "Mar 2025",
+        endDate: new Date(2025, 2),
         skills: ["Python", "Pandas", "Scikit-learn", "BeautifulSoup", "Machine Learning", "Web Scraping", "Data Analysis"],
         description: [
             "Implemented a Random Forest Machine Learning model through Scikit-learn in Python, to predict the outcome of Premier League matches, improving accuracy to 64%.",
@@ -54,7 +54,7 @@ const projects = [
         title: "Sequence",
         link: "https://github.com/mikais13/Sequence-CS130",
         categories: ["Desktop App", "Academic"],
-        endDate: "Oct 2024",
+        endDate: new Date(2024, 9),
         skills: ["Python", "Tkinter"],
         description: [
             "Developed a GUI desktop application for a Connect-4 style game according to the COMPSCI 130 assignment specifications.",
@@ -65,7 +65,7 @@ const projects = [
         title: "Club Management System",
         link: "https://github.com/mikais13/Club-Management-Dashboard",
         categories: ["Academic", "Web Development"],
-        endDate: "2023",
+        endDate: 2023,
         skills: ["PHP", "SQL", "JavaScript", "HTML", "CSS", "Bootstrap"],
         description: [
             "Built a full-stack web application to manage school clubs, including a database, login system, and CRUD operations.",
@@ -76,7 +76,7 @@ const projects = [
         title: "Gem Runner",
         link: "https://github.com/mikais13/Gem-Runner",
         categories: ["Desktop App", "Academic"],
-        endDate: "2023",
+        endDate: 2023,
         skills: ["Java", "JavaFX"],
         description: [
             "Developed a desktop game where players navigate through obstacles while collecting gems.",

@@ -7,8 +7,15 @@ export default function ExperienceCard({ experience }) {
     var date = "";
     if (experience.endDate != null) {
         date = experience.endDate;
+        if (date instanceof Date) {
+            date = date.toLocaleString('default', { month: 'short', year: 'numeric' });
+        }
         if (experience.startDate != null) {
-            date = experience.startDate + " - " + experience.endDate;
+            if (experience.startDate instanceof Date) {
+                date = experience.startDate.toLocaleString('default', { month: 'short', year: 'numeric' }) + " - " + date;
+            } else {
+                date = experience.startDate + " - " + experience.endDate;
+            }
         }
     }
 
