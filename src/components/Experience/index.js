@@ -52,7 +52,7 @@ const projects = [
     },
     {
         title: "Sequence",
-        link: "https://github.com/mikais13/Sequence-CS130",
+        link: "https://github.com/mikais13/Sequence",
         categories: ["Desktop App", "Academic"],
         endDate: new Date(2024, 9),
         skills: ["Python", "Tkinter"],
