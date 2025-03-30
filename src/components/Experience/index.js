@@ -9,6 +9,20 @@ import PageSection from "../PageSection";
 
 const roles = [
     {
+        title: "Full-Stack Developer",
+        categories: ["Web Development"],
+        company: "Web Development and Consulting Club",
+        location: "Auckland, New Zealand",
+        startDate: new Date(2025, 3),
+        endDate: "Present",
+        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Agile", "CI/CD"],
+        description: [
+            "Enhancing the Auckland University Badminton Club's web application for >1,000 active users utilising a Next.js front-end in Typescript with Tailwind CSS and NextAuth for authentication.",
+            "Migrating back-end to a noSQL Firebase database from a PostgreSQL solution using Drizzle.",
+            "Collaborating in an Agile environment with 10 team members using Github workflows, and CI/CD principles."
+        ]
+    },
+    {
         title: "Research and Development Intern",
         categories: ["Internship", "Professional", "Research"],
         company: "PGG Wrightson",
