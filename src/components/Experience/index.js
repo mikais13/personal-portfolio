@@ -17,9 +17,9 @@ const roles = [
         endDate: "Present",
         skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Agile", "CI/CD"],
         description: [
-            "Enhancing the Auckland University Badminton Club's web application for >1,000 active users utilising a Next.js front-end in Typescript with Tailwind CSS and NextAuth for authentication.",
-            "Migrating back-end to a noSQL Firebase database from a PostgreSQL solution using Drizzle.",
-            "Collaborating in an Agile environment with 10 team members using Github workflows, and CI/CD principles."
+            "Enhancing the Auckland University Badminton Club's web app for >1,000 active users utilising a Next.js frontend in Typescript, using Yamada UI styling, and a backend implemented with Payload CMS, and MongoDB.",
+            "Building full-stack unit and integration tests using Vitest, and documenting UI components using Storybook.",
+            "Collaborating in an Agile environment with 10 team members using GitHub workflows, and CI/CD principles."
         ]
     },
     {
