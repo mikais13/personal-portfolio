@@ -14,7 +14,7 @@ const roles = [
         location: "Auckland, New Zealand",
         startDate: new Date(2025, 3),
         endDate: "Present",
-        skills: ["React", "Next.js", "Typescript", "Tailwind CSS", "Agile", "CI/CD"],
+        skills: ["React", "Next.js", "Typescript", "Payload CMS", "Tanstack Query", "Vitest", "Storybook", "Yamada UI", "Unit Testing", "Integration Testing", "Documentation"],
         description: [
             "Enhancing the Auckland University Badminton Club's web app for >1,000 active users utilising a Next.js frontend in Typescript, using Yamada UI styling, and a backend implemented with Payload CMS, and MongoDB.",
             "Building full-stack unit and integration tests using Vitest, and documenting UI components using Storybook.",
