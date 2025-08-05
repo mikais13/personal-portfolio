@@ -67,12 +67,23 @@ const projects = [
         title: "Web Memories",
         link: "https://github.com/ExceptionHandlersUOA/NostalgiaClient",
         categories: ["Web Development", "Hackathon"],
-        startDate: new Date(2025, 8, 2),
-        endDate: new Date(2025, 8, 3),
+        endDate: new Date(2025, 7, 3),
         skills: ["Typescript", "React", "Next.js", "Tailwind CSS", "Tanstack Query", "shadcn", "Motion"],
         description: [
-            'Developed in 36 hours for the 2025 WDCC x SESA Hackathon with a group of six developers, and won "Most Overengineered".',
+            "Developed in 36 hours for the 2025 WDCC x SESA Hackathon with a group of six developers, and won the 'Most Overengineered' award.",
             "Created a web app to archive and view social media and custom memories, using Next.js with Typescript, and Tailwind CSS.",
+        ]
+    },
+    {
+        title: "Partly UI",
+        link: "https://github.com/jeffplays2005/partly-hackathon-team-3",
+        categories: ["Hackathon", "Web Development"],
+        endDate: new Date(2025, 6, 27),
+        skills: ["Next.js", "React", "Typescript", "Yamada UI", "Motion"],
+        description: [
+            "Developed in 8 hours for the 2025 Partly x WDCC Hackathon within a group of four developers, and won the 'Most Production Ready' award.",
+            "Created an intuitive UI to visualise the world tree data, using Next.js with Typescript, and Yamada UI, by designing a user-friendly horizontal tree table view and an interactive visualisation from a model of a car.",
+            "Implemented production APIs from Partly to get world tree data.",
         ]
     },
     {
