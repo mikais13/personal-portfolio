@@ -1,4 +1,3 @@
-import React from "react";
 import ExperienceList from "../ExperienceList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +14,7 @@ const roles = [
         location: "Auckland, New Zealand",
         startDate: new Date(2025, 3),
         endDate: "Present",
-        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Agile", "CI/CD"],
+        skills: ["React", "Next.js", "Typescript", "Tailwind CSS", "Agile", "CI/CD"],
         description: [
             "Enhancing the Auckland University Badminton Club's web app for >1,000 active users utilising a Next.js frontend in Typescript, using Yamada UI styling, and a backend implemented with Payload CMS, and MongoDB.",
             "Building full-stack unit and integration tests using Vitest, and documenting UI components using Storybook.",
@@ -63,6 +62,18 @@ const projects = [
             "Implemented a Random Forest Machine Learning model through Scikit-learn in Python, to predict the outcome of Premier League matches, improving accuracy to 64%.",
             "Performed web scraping using BeautifulSoup to gather data, captured in Pandas, about Premier League matches."
         ],
+    },
+    {
+        title: "Web Memories",
+        link: "https://github.com/ExceptionHandlersUOA/NostalgiaClient",
+        categories: ["Web Development", "Hackathon"],
+        startDate: new Date(2025, 8, 2),
+        endDate: new Date(2025, 8, 3),
+        skills: ["Typescript", "React", "Next.js", "Tailwind CSS", "Tanstack Query", "shadcn", "Motion"],
+        description: [
+            'Developed in 36 hours for the 2025 WDCC x SESA Hackathon with a group of six developers, and won "Most Overengineered".',
+            "Created a web app to archive and view social media and custom memories, using Next.js with Typescript, and Tailwind CSS.",
+        ]
     },
     {
         title: "Sequence",
