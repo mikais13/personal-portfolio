@@ -1,18 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ExperienceCard from './ExperienceCard';
 import { motion } from 'motion/react';
 
 export default function ExperienceList({ id, experiences }) {
-    experiences = experiences.sort((a, b) => {
-        if (a.endDate < b.endDate) {
-            return 1;
-        } else if (a.endDate > b.endDate) {
-            return -1;
-        } else {
-            return 0;
-        }
-    });
-
     const [categories, setCategories] = useState({
         "All": true,
         ...Object.fromEntries(

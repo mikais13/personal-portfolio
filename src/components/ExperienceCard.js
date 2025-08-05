@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -19,18 +18,23 @@ export default function ExperienceCard({ experience }) {
         }
     }
 
+    const random = Math.random() > 0.5 ? 1 : -1;
+
     const skillShake = {
         initial: {
-            y: 0
+            y: 0,
+            rotate: 0,
         },
         rest: {
             y: 0,
+            rotate: 0,
             transition: {
                 duration: 0.75
             }
         },
         hover: {
             y: [0, -4, 2, 0],
+            rotate: [0, 1.5 * random, -1 * random, 0],
             transition: {
                 duration: 0.75,
                 type: 'tween',
@@ -93,7 +97,7 @@ export default function ExperienceCard({ experience }) {
                 <div className='skills'>
                     {
                         experience.skills.map((skill) => {
-                            return <motion.p id={skill} className='skill' variants={skillShake}>{skill}</motion.p>;
+                            return <motion.p id={skill} className='skill' variants={skillShake} style={{transformOrigin: "50% 50%"}}>{skill}</motion.p>;
                         })
                     }
                 </div>
