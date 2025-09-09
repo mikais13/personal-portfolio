@@ -44,7 +44,7 @@ const projects = [
         link: "https://github.com/mikais13/personal-portfolio",
         categories: ["Web Development", "Personal"],
         startDate: new Date(2024, 10),
-        endDate: "Present",
+        endDate: new Date(2025, 1),
         skills: ["React", "JavaScript", "Sass", "React Router", "Motion", "HTML", "CSS"],
         description: [
             "Developed this portfolio website to showcase more about myself, my skills, and experiences.",
