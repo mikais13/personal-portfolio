@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio! This web application is built using React with React Router, Sass styling, and Motion for complex animations. The site showcases my skills, projects, and achievements in the field of web development. You can check it out at [mikaisomerville.com](https://www.mikaisomerville.com)!
 
+[![CodeFactor](https://www.codefactor.io/repository/github/mikais13/personal-portfolio/badge)](https://www.codefactor.io/repository/github/mikais13/personal-portfolio)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
