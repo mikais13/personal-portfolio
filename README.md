@@ -1,6 +1,6 @@
 # Mikai Somerville's Portfolio Website
 
-Welcome to my personal portfolio! This web application is built using React with React Router, Sass styling, and Motion for complex animations. The site showcases my skills, projects, and achievements in the field of web development. You can check it out [here!](https://www.mikaisomerville.com)
+Welcome to my personal portfolio! This web application is built using React with React Router, Sass styling, and Motion for complex animations. The site showcases my skills, projects, and achievements in the field of web development. You can check it out at [mikaisomerville.com](https://www.mikaisomerville.com)!
 
 ## Table of Contents
 
