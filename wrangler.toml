@@ -1,6 +1,5 @@
 name = "personal-portfolio"
-main = "build/index.html"
 compatibility_date = "2024-01-01"
 
-[site]
-bucket = "./build"
+[assets]
+directory = "./build"
