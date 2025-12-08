@@ -1,25 +1,32 @@
-import React, { useEffect } from 'react';
-import Root from '../components/Root';
-import About from '../components/About';
-import Home from '../components/Home';
-import ExperiencePage from '../components/Experience';
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
-import './App.scss';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { useEffect } from "react"
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom"
+import About from "../components/About"
+import ExperiencePage from "../components/Experience"
+import Home from "../components/Home"
+import Root from "../components/Root"
+import "./App.scss"
 
-const router = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={<Root />}>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/experience" element={< ExperiencePage />} />
-  </Route>
-));
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Root />} path="/">
+      <Route element={<Home />} path="/" />
+      <Route element={<About />} path="/about" />
+      <Route element={<ExperiencePage />} path="/experience" />
+    </Route>,
+  ),
+)
 
 function App() {
   useEffect(() => {
-    document.title = `Mikai Somerville`;
-  }, []);
+    document.title = "Mikai Somerville"
+  }, [])
 
   return (
     <>
@@ -27,7 +34,7 @@ function App() {
       <SpeedInsights />
       <Analytics />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
