@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react"
 import { useEffect } from "react"
 import {
   createBrowserRouter,
@@ -28,13 +26,7 @@ function App() {
     document.title = "Mikai Somerville"
   }, [])
 
-  return (
-    <>
-      <RouterProvider router={router} />
-      <SpeedInsights />
-      <Analytics />
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
