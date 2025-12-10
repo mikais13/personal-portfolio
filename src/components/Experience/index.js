@@ -57,11 +57,11 @@ const projects = [
     categories: ["Web Development", "Personal"],
     startDate: new Date(2024, 10),
     endDate: new Date(2025, 1),
-    skills: ["React", "JavaScript", "Sass", "React Router", "Motion", "HTML", "CSS"],
+    skills: ["React", "JavaScript", "Sass", "React Router", "Motion", "Cloudflare", "HTML", "CSS"],
     description: [
       "Developed this portfolio website to showcase more about myself, my skills, and experiences.",
       "Designed and developed a responsive website using React with React Router, and Sass, along with Motion.",
-      "Deployed using Vercel and a custom domain.",
+      "Deployed using Cloudflare Pages with a custom domain.",
     ],
   },
   {
