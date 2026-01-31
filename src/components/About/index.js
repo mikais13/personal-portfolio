@@ -14,7 +14,7 @@ const education = [
     skills: ["Computer Science", "Mathematics", "Statistics"],
     description: [
       "Currently studying my penultimate year of a Bachelor of Science majoring in Computer Science.",
-      "9.0/9.0 GPA - A+ average.",
+      "8.94/9.0 GPA - A+ average.",
     ],
   },
   {
