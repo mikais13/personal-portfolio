@@ -135,39 +135,6 @@ const projects = [
       "Implemented production APIs from Partly to get world tree data.",
     ],
   },
-  {
-    title: "Sequence",
-    link: "https://github.com/mikais13/Sequence",
-    categories: ["Desktop App", "Academic"],
-    endDate: new Date(2024, 9),
-    skills: ["Python", "Tkinter"],
-    description: [
-      "Developed a GUI desktop application for a Connect-4 style game according to the COMPSCI 130 assignment specifications.",
-      "Implemented a GUI using Tkinter, and a game engine using Python.",
-    ],
-  },
-  {
-    title: "Club Management System",
-    link: "https://github.com/mikais13/Club-Management-Dashboard",
-    categories: ["Academic", "Web Development"],
-    endDate: 2023,
-    skills: ["PHP", "SQL", "JavaScript", "HTML", "CSS", "Bootstrap"],
-    description: [
-      "Built a full-stack web application to manage school clubs, including a database, login system, and CRUD operations.",
-      "My project for one of my Year 13 Digital Technology assessments.",
-    ],
-  },
-  {
-    title: "Gem Runner",
-    link: "https://github.com/mikais13/Gem-Runner",
-    categories: ["Desktop App", "Academic"],
-    endDate: 2023,
-    skills: ["Java", "JavaFX"],
-    description: [
-      "Developed a desktop game where players navigate through obstacles while collecting gems.",
-      "My project for one of my NCEA Level 3 Digital Technology assessments that I did in Year 12.",
-    ],
-  },
 ]
 
 export default function ExperiencePage() {
