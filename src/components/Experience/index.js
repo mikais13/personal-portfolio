@@ -29,32 +29,7 @@ const roles = [
       "Built a data migration tool capable of migrating 2M+ records across numerous tenant databases into a single source of truth, alongside an OpenFeature-based feature flag system, enabling safe and controlled rollouts.",
     ],
   },
-  {
-    title: "Full-Stack Developer",
-    categories: ["Web Development"],
-    company: "Web Development and Consulting Club",
-    location: "Auckland, New Zealand",
-    startDate: new Date(2025, 3),
-    endDate: new Date(2025, 9),
-    skills: [
-      "React",
-      "Next.js",
-      "Typescript",
-      "Payload CMS",
-      "Tanstack Query",
-      "Vitest",
-      "Storybook",
-      "Yamada UI",
-      "Unit Testing",
-      "Integration Testing",
-      "Documentation",
-    ],
-    description: [
-      "Enhancing the Auckland University Badminton Club's web app for >1,000 active users utilising a Next.js frontend in Typescript, using Yamada UI styling, and a backend implemented with Payload CMS, and MongoDB.",
-      "Building full-stack unit and integration tests using Vitest, and documenting UI components using Storybook.",
-      "Collaborating in an Agile environment with 10 team members using GitHub workflows, and CI/CD principles.",
-    ],
-  },
+
   {
     title: "Research and Development Intern",
     categories: ["Internship", "Professional", "Research"],
@@ -73,6 +48,30 @@ const roles = [
 ]
 
 const projects = [
+  {
+    title: "UoA Badminton Club Website",
+    categories: ["Web Development", "Team"],
+    startDate: new Date(2025, 3),
+    endDate: new Date(2025, 9),
+    skills: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Payload CMS",
+      "Tanstack Query",
+      "Vitest",
+      "Storybook",
+      "Yamada UI",
+      "Unit Testing",
+      "Integration Testing",
+      "Documentation",
+    ],
+    description: [
+      "Enhanced UABC's web app utilising a  Typescript monorepo with a Next.js frontend using Yamada UI styling, a backend implemented with Payload CMS, and a MongoDB database.",
+      "Built full-stack unit and integration tests using Vitest, and documented UI components using Storybook.",
+      "Collaborated in an Agile, Kanban environment with 10 team members using Git, with GitHub Actions for CI/CD.",
+    ],
+  },
   {
     title: "Portfolio Website",
     link: "https://github.com/mikais13/personal-portfolio",
@@ -108,7 +107,7 @@ const projects = [
   {
     title: "Web Memories",
     link: "https://github.com/ExceptionHandlersUOA/NostalgiaClient",
-    categories: ["Web Development", "Hackathon"],
+    categories: ["Web Development", "Hackathon", "Team"],
     endDate: new Date(2025, 7, 3),
     skills: [
       "Typescript",
@@ -127,7 +126,7 @@ const projects = [
   {
     title: "Partly UI",
     link: "https://github.com/jeffplays2005/partly-hackathon-team-3",
-    categories: ["Hackathon", "Web Development"],
+    categories: ["Hackathon", "Web Development", "Team"],
     endDate: new Date(2025, 6, 27),
     skills: ["Next.js", "React", "Typescript", "Yamada UI", "Motion"],
     description: [
