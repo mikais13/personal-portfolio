@@ -8,12 +8,34 @@ import PageSection from "../PageSection"
 
 const roles = [
   {
+    title: "Software Engineer Intern",
+    categories: ["Internship", "Professional"],
+    company: "Generate Zero",
+    location: "Auckland, New Zealand",
+    startDate: new Date(2025, 10),
+    endDate: new Date(2026, 1),
+    skills: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma",
+      "SQL Server",
+      "Full-Stack Development",
+    ],
+    description: [
+      "Developed full-stack features across the platform with Next.js, React, TypeScript, TailwindCSS, Prisma, and SQL Server to improve automation, scalability, and user experience.",
+      "Streamlined organisation onboarding through a self-service bulk upload with automated file parsing, eliminating manual analyst intervention, and supporting faster market expansion.",
+      "Built a data migration tool capable of migrating 2M+ records across numerous tenant databases into a single source of truth, alongside an OpenFeature-based feature flag system, enabling safe and controlled rollouts.",
+    ],
+  },
+  {
     title: "Full-Stack Developer",
     categories: ["Web Development"],
     company: "Web Development and Consulting Club",
     location: "Auckland, New Zealand",
     startDate: new Date(2025, 3),
-    endDate: "Present",
+    endDate: new Date(2025, 9),
     skills: [
       "React",
       "Next.js",
