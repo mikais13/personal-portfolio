@@ -15,8 +15,7 @@ export default function Home() {
     {
       title: "Compsci Student",
       company: "University of Auckland",
-      description:
-        "I am a penultimate-year student pursuing a Bachelor of Science majoring in Computer Science",
+      description: "I am currently pursuing a Bachelor of Science majoring in Computer Science",
     },
     {
       title: "Sports Fan",
@@ -46,8 +45,15 @@ export default function Home() {
         <h3 className="intro">A University of Auckland Computer Science Student</h3>
         <p className="intro">Welcome to my portfolio!</p>
         <p className="intro">
-          I'm a current penultimate year Computer Science student at The University of Auckland,
-          with a passion for solving problems and creating things through code.
+          I'm a current Computer Science student at The University of Auckland, with a passion for
+          solving problems and creating things through code.
+        </p>
+        <p>
+          I have spent this summer at Generate Zero as a Software Engineer Intern, where I have been
+          able to work on full-stack features that improve automation, scalability, and user
+          experience across the platform. I have been surrounded by a team of talented engineers who
+          I have worked with to help companies reduce their carbon emissions through data-driven
+          insights and solutions.
         </p>
         <p className="intro">
           Last summer, I was fortunate enough to work as a R&D Intern at PGG Wrightson, where I had

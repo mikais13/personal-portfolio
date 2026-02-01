@@ -13,8 +13,9 @@ const education = [
     endDate: 2026,
     skills: ["Computer Science", "Mathematics", "Statistics"],
     description: [
-      "Currently studying my penultimate year of a Bachelor of Science majoring in Computer Science.",
       "8.94/9.0 GPA - A+ average.",
+      "Inaugural Rutherford Science High Achiever Scholar in 2025 - valued at $10,000.",
+      "University of Auckland Top Achiever Scholarship in 2024 - valued at $25,000",
     ],
   },
   {
