@@ -54,9 +54,9 @@ export default function About() {
     >
       <PageSection title="About Me">
         <p>
-          Kia Ora, I'm Mikai Somerville, a penultimate year Computer Science student at the
-          University of Auckland. I grew up in the small town of Katikati before coming to Auckland
-          to pursue my passion for Computer Science and Software Development.
+          Kia Ora, I'm Mikai Somerville, a third year Computer Science student at the University of
+          Auckland. I grew up in the small town of Katikati before coming to Auckland to pursue my
+          passion for building software and solving complex problems.
         </p>
       </PageSection>
       <PageSection title="Education">
