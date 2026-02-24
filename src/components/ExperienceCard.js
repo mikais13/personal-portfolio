@@ -92,7 +92,7 @@ export default function ExperienceCard({ experience }) {
       <div className="header">
         {experience.link == null
           ? <p className="title">{experience.title}</p>
-          : <a className="title" href={experience.link}>
+          : <a className="title" href={experience.link} rel="noreferrer" target="_blank">
               {experience.title} <FontAwesomeIcon icon={faArrowUp} />
             </a>}
         <div className="date">

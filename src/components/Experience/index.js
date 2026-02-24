@@ -178,7 +178,7 @@ export default function ExperiencePage() {
       layoutId="page"
     >
       <PageSection title="Experience">
-        <a className="resume-link" href="/Mikai_Somerville_Resume.pdf">
+        <a className="resume-link" href="/Mikai_Somerville_Resume.pdf" rel="noreferrer" target="_blank">
           View Full Resume <FontAwesomeIcon icon={faArrowUp} />
         </a>
         <ExperienceList experiences={roles} id="roles" />

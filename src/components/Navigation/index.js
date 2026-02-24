@@ -119,6 +119,8 @@ export default function Navigation() {
           alt="LinkedIn"
           className="nav-link logo-link"
           href="https://linkedin.com/in/mikaisomerville"
+          rel="noreferrer"
+          target="_blank"
           title="LinkedIn"
         >
           <FontAwesomeIcon icon={faLinkedin} />
@@ -127,6 +129,8 @@ export default function Navigation() {
           alt="GitHub"
           className="nav-link logo-link"
           href="https://github.com/mikais13"
+          rel="noreferrer"
+          target="_blank"
           title="Github"
         >
           <FontAwesomeIcon icon={faSquareGithub} />
@@ -135,6 +139,8 @@ export default function Navigation() {
           alt="Resume"
           className="nav-link logo-link"
           href="/Mikai_Somerville_Resume.pdf"
+          rel="noreferrer"
+          target="_blank"
           title="Resume"
         >
           <FontAwesomeIcon icon={faFile} />
