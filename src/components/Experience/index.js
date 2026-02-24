@@ -49,6 +49,38 @@ const roles = [
 
 const projects = [
   {
+    title: "UOACS Club Website",
+    link: "https://github.com/UoaUOACS/UOACS-Website",
+    categories: ["Web Development", "Team"],
+    skills: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Payload CMS",
+      "MongoDB",
+      "AWS S3",
+      "Docker",
+      "Fly.io",
+      "Tailwind CSS",
+      "Storybook",
+      "Github Actions",
+    ],
+    description: [
+      "Developed the full-stack application utilising Next.js and Tailwind CSS for the frontend, with Payload CMS, MongoDB, and AWS S3 buckets for content management, delivering a performant and SEO-optimised site.",
+      "Owned all DevOps and infrastructure: Dockerised the app, configured isolated, multi-environment Fly.io deployments, and built GitHub Actions pipelines for automated CI/CD.",
+    ],
+  },
+  {
+    title: "Automated PR Stack Manager",
+    link: "https://github.com/mikais13/pr-stack",
+    categories: ["Personal"],
+    skills: ["TypeScript", "Bun", "GitHub API", "GitHub Apps", "Hono", "Git"],
+    description: [
+      "Engineered a GitHub App and Hono API with webhook-driven auto-rebase logic to automate stacked PR management, rebasing dependent PRs on merge, and intelligently resolving conflicts.",
+      "Reduces CI runtime from up to 10 minutes to under 30 seconds by detecting rebase-only changes via tree SHA comparison, cutting wasted compute time, and shortening feedback loops in stacked PR workflows.",
+    ],
+  },
+  {
     title: "UoA Badminton Club Website",
     categories: ["Web Development", "Team"],
     startDate: new Date(2025, 3),
