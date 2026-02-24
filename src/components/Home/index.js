@@ -7,7 +7,7 @@ import "./index.scss"
 export default function Home() {
   const summaries = [
     {
-      title: "Software Engineer Intern",
+      title: "SWE Intern",
       company: "Generate Zero",
       description:
         "I am developing full-stack features to improve automation, scalability, and user experience",
