@@ -22,6 +22,9 @@
   }
 
   .summary-carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     max-width: 640px;
     padding: 16px 0;
