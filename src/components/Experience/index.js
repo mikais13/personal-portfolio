@@ -82,6 +82,7 @@ const projects = [
   },
   {
     title: "UoA Badminton Club Website",
+    link: "https://github.com/UoaWDCC/uabc-web",
     categories: ["Web Development", "Team"],
     startDate: new Date(2025, 3),
     endDate: new Date(2025, 9),
